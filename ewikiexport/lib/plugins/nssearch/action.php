@@ -42,8 +42,15 @@ class action_plugin_nssearch extends DokuWiki_Action_Plugin
 	}
 
 	function handleQuery(&$event, $param)
-	{
-		$ns = $this->getLimitNs($this->getLastCrumb());
+	{          
+		$ns = $this->getLimitNs($this->getLastCrumb());                
+           
+                $this->helper = plugin_load('helper', 'ateneuplus');
+                $cami =  str_replace(":", "/", $ns);
+                $titol = $this->helper->get_titol($cami,2);
+               print 'Trobat a: <b>'. $titol.'</b>';
+             
+               //echo " fffff ".$event->data['query'];
 		if ($ns && $event->data['query'])
         		$event->data['query'] = 'ns:' . $ns . ' ' . $event->data['query'];
 	}
@@ -71,7 +78,13 @@ class action_plugin_nssearch extends DokuWiki_Action_Plugin
 		if ($nslist[0] == '@all')
 			return getNS($id);
 		if ($nslist[0] == '@base')
-			return $this->getBaseNs($id);
+                            $cami =  str_replace(":", "/", $id);
+                            $this->helper = plugin_load('helper', 'ateneuplus');
+                            $base = $this->helper->get_base($cami);  
+                            echo $base."<br>";
+			//return $this->getBaseNs($id);
+			return $base;
+        
 		if (substr($nslist[0],0,6) == '@depth')
 			return $this->getDepthNs($id, substr($nslist[0],6));
 

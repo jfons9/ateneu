@@ -236,38 +236,15 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
         //$pagina = getNS($pagina);
 
         $base_inici = trim($this->get_base($_SERVER["REQUEST_URI"]));
-
-        $fitxerindex = str_replace(":", "/", $this->arrel . $base_inici . "/index.txt");
-        $fitxerini = str_replace(":", "/", $this->arrel . $base_inici . "/ini.txt");
-
-        // Si exiteix el fitxer ini.txt llegim el títol i codi i els tornem ...
-        /* if (file_exists($fitxerini)) {
-          $result_ini = $this->get_ini($pagina);
-
-          $codi = '';
-          if (trim($result_ini['codi']) != '') {
-          $codi = $result_ini['codi'] . " - ";
-          }
-          $titol = $codi . $result_ini['titol'];
-
-          // si no existeix el fitxer ini.txt, gnerm títol i codi ple mètode "clàssic"
-          } else {
-          // echo $fitxerindex . "<br>";
-          $linies = file($fitxerindex);
-          // agafem el títol definit a la primera línia
-          $ok = 0;
-          for ($i = 0; $i < 5; $i++) {
-          if (strpos($linies[$i], "<html><!--") !== false) {
-          $inici = strpos($linia, "<html><!--");    // primer
-          $busca = array("<html>", "<!--", "</html>", "-->");
-          //$titol = trim(substr($linies[$i], $inici + 10, $inici + strlen($linies[$i]) - 21));
-          $titol = trim(str_replace($busca, "", $linies[$i]));
-          break;
-          }
-          }
-          }
-         * 
-         */
+       
+        if ($tipus == 2){
+            $fitxerindex = str_replace(":", "/", $this->arrel . $pagina . "/index.txt");        
+            $fitxerini = str_replace(":", "/", $this->arrel . $pagina . "/ini.txt");           
+        }else{
+            $fitxerindex = str_replace(":", "/", $this->arrel . $base_inici . "/index.txt");        
+            $fitxerini = str_replace(":", "/", $this->arrel . $base_inici . "/ini.txt");
+        }
+        echo $fitxerindex;
         // Si exiteix el fitxer ini.txt llegim el títol i codi i els tornem ...
         if (file_exists($fitxerini)) {
             $ini = $this->get_ini($pagina);
