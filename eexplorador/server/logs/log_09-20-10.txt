@@ -1,0 +1,54 @@
+09-20-10 9:47:08	10.155.12.15	INFO	admin	Log Out	
+09-20-10 9:47:21	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 9:47:21	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:47:30	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:47:31	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:48:13	10.155.12.15	INFO	jferran6	Log Out	
+09-20-10 9:48:26	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 9:48:26	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:48:27	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:48:37	10.155.12.15	INFO	jferran6	Log Out	
+09-20-10 9:49:07	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 9:49:07	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:49:51	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 9:49:52	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:49:53	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:50:09	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:50:13	10.155.12.15	INFO	jferran6	Log Out	
+09-20-10 9:50:32	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 9:50:32	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:50:33	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:50:55	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 9:50:55	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:51:51	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 9:51:51	10.155.12.15	INFO	jferran6	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jferran6/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:53:08	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 9:53:19	10.155.12.15	INFO	jferran6	Log Out	
+09-20-10 9:53:52	10.155.12.15	INFO	admin	Log In	
+09-20-10 9:56:55	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-20-10 9:57:15	10.155.12.15	INFO	admin	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/users.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-20-10 9:57:47	10.155.12.15	INFO	admin	Create User	user_id=aaaa
+09-20-10 9:57:55	10.155.12.15	INFO	admin	Delete User	user_id=aaaa
+09-20-10 9:58:05	10.155.12.15	INFO	admin	Create User	user_id=aaaa
+09-20-10 9:58:07	10.155.12.15	INFO	admin	Log Out	
+09-20-10 9:58:13	10.155.12.15	INFO	aaaa	Log In	
+09-20-10 10:25:37	10.155.12.15	INFO	aaaa	Log Out	
+09-20-10 10:25:52	10.155.12.15	INFO	admin	Log In	
+09-20-10 10:25:58	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-20-10 10:26:10	10.155.12.15	INFO	admin	Delete User	user_id=jferran6
+09-20-10 10:26:26	10.155.12.15	INFO	admin	Create User	user_id=jferran6
+09-20-10 10:27:42	10.155.12.15	INFO	admin	Log Out	
+09-20-10 10:27:50	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 14:00:27	10.155.12.15	INFO	jferran6	Log In	
+09-20-10 14:00:35	10.155.12.15	INFO	jferran6	Log Out	
+09-20-10 14:08:21	10.155.12.15	INFO	admin	Log In	
+09-20-10 14:08:29	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+09-20-10 14:08:38	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+09-20-10 14:09:01	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+09-20-10 14:10:36	10.155.12.15	INFO	admin	Log Out	
+09-20-10 14:18:59	10.155.12.15	INFO	admin	Log In	
+09-20-10 14:19:08	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+09-20-10 14:19:19	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+09-20-10 14:20:28	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-20-10 14:21:34	10.155.12.15	INFO	admin	error	message=2 : file_put_contents(/dades/wikiform/eexplorador/server/conf/diag_result.php) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: Permission denied in /dades/wikiform/eexplorador/server/classes/class.Utils.php (l.492)
+09-20-10 14:52:26	10.155.12.15	INFO	admin	Log Out	

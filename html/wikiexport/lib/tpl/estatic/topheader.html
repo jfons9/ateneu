@@ -1,0 +1,14 @@
+<a id="inici"> </a>
+<div class="headermenu">
+           <a href="http://www.gencat.cat/educacio" target="_blank"><span class="logodepart"></span></a>
+           <a href="http://www.xtec.cat" target="_blank"><span class="logoxtec"></span></a>   
+	    <?php tpl_actionlink('admin','',' | ')?>
+    <?php if($_SERVER['REMOTE_USER']){
+             tpl_link(wl($ID,'do=logout&amp;sectok='.getSecurityToken()),
+                   $pre.(($inner)?$inner:$lang['btn_logout']).$suf,
+                   'class="action logout" rel="nofollow"');
+          }?>
+         <?php tpl_searchform(); ?>
+
+
+</div>

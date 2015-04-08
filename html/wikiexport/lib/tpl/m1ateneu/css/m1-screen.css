@@ -1,0 +1,169 @@
+/**
+ * This file provides styles for the general layout of the m1 template.
+ * This layout is based on a mobile-first philosophy.  See m1_mobile.css
+ * for the css to progressively enhance the template for tablets and
+ * desktops.
+ *
+ * @author Eric Howey <ehowey@gmail.com>
+ *  Colors:
+ *  Dark Blue: #008BB3
+ *	Bright Blue: #0AF
+ *	Bright Green: #00CB3D
+  */
+ 
+/* Display Nones
+*********************************************/
+.m1-tablet {display: none;}
+.m1-desktop {display: none;}
+#m1-menu {display: none;}
+#dokuwiki__aside {display: none;}
+.secedit {display: none;}
+#m1-menu-right {display: none;}
+#m1-menu-left {display: none;}
+#m1-search {display: none;}
+#dw__search {display: none;}
+.breadcrumbs {display: none;}
+ 
+ /* Structure
+*********************************************/
+#dokuwiki__site {padding: 0;}
+.hasSidebar #dokuwiki__content, #dokuwiki__content {padding: 0; margin: 60px auto 2em auto; float: none; max-width: 37.5em;}
+.page {padding: 0 1em;}
+
+/* Headings
+*********************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {font: normal 100%/1.4 "Open Sans",Helvetica,Arial,sans-serif;}
+
+/*h6 {font-family: Frutiger, Calibri, "Myriad Pro", Myriad, "Nimbus Sans L", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;}*/
+
+.page h1 {background-color: #00CB3D; color: #fff; padding: 0 0.5em;}
+#dokuwiki__header h1 a {color: #fff; font-weight: normal;}
+h2 {border-bottom: 6px solid #ccc;}
+h3 {border-bottom: 4px solid #ccc;}
+
+
+/* Links
+*********************************************/
+a:link,
+a:visited {
+    color: #000; /* §colour */
+    font-weight: bold;
+}
+a:link:active,
+a:visited:active {
+    color: #00CB3D; /* §colour */
+}
+
+/* Header
+*********************************************/
+#dokuwiki__header {border-bottom: 4px solid #008BB3; background-color: #000; height: 40px; margin: 0; width: 100%; position: fixed; top: 0; z-index: 300;}
+#dokuwiki__header h1 {margin: 0; padding: 0;}
+#dokuwiki__header a {color: #fff;}
+#m1-header-left {float: left; width: 15%;}
+#m1-header-right {float: left; width: 30%; text-align: right;}
+#m1-header-center {text-align: center; float: left; width: 55%; padding-top: 0.3em;}
+.m1-imglogo {height: 25px;}
+#m1-menu-strig .fa-search {background-color: #008BB3;} 
+
+/* Menus, adapted from http://cssmenumaker.com/blog/flat-dropdown-menu-tutorial
+*********************************************/
+
+#m1-menu {padding: 0; margin: 0; border: 0;}
+#m1-menu ul, #m1-menu li {list-style: none; margin: 0; padding: 0;}
+#m1-menu ul {position: relative; z-index: 597; }
+#m1-menu ul li {float: left; min-height: 1px; vertical-align: middle;}
+#m1-menu ul li.hover,
+#m1-menu ul li:hover {position: relative; z-index: 599; cursor: default;}
+#m1-menu ul ul {visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; width: 100%;}
+#m1-menu ul ul li {float: none;}
+#m1-menu ul ul ul {top: 0; left: auto; right: -99.5%; }
+#m1-menu ul li:hover > ul {visibility: visible;}
+#m1-menu ul ul {bottom: 0; left: 0;}
+#m1-menu ul ul {margin-top: 0; }
+#m1-menu ul ul li {}
+#m1-menu a {display: block; line-height: 1em; text-decoration: none;}
+
+#m1-menu {background: #000; border-bottom: 4px solid #008BB3; font-size:  1.000em;}  /*// 1.125em;}*/
+#m1-menu > ul {*display: inline-block; }
+#m1-menu:after, #m1-menu ul:after {content: ''; display: block; clear: both; }
+#m1-menu a {background: #000; color: #fff; padding: 0 10px; font-weight: normal; letter-spacing: 0.5px;}
+#m1-menu ul {float: right;}
+#m1-menu ul ul {border-top: 4px solid #008BB3; text-transform: none; min-width: 190px;}
+#m1-menu ul ul a {background: #008BB3; color: #FFF; line-height: 100%; padding: 10px 20px; font-size: 0.875em;}
+#m1-menu ul ul li { position: relative }
+#m1-menu > ul > li > a { line-height: 40px;  }
+#m1-menu ul ul li:first-child > a { }
+#m1-menu ul ul li:hover > a {background: #0AF;}
+#m1-menu ul ul li:last-child > a { }
+#m1-menu ul ul li:last-child:hover > a {  }
+#m1-menu ul ul li.has-sub > a:after {content: '+'; position: absolute; top: 50%; right: 15px; margin-top: -8px;}
+#m1-menu ul li:hover > a, #m1-menu ul li.active > a {background: #008BB3; color: #FFF;}
+#m1-menu ul li.has-sub > a:after {content: '+'; margin-left: 5px; }
+#m1-menu ul li.last ul {left: auto; right: 0;}
+#m1-menu ul li.last ul ul {left: auto; right: 99.5%;}
+
+/* Sidebar
+*********************************************/
+.m1-sidebox {margin: 0em auto 1em auto; padding: 0em 1em; clear: both;} 
+
+.m1-side-tools ul {list-style-type: none; padding: 0 !important; margin: 0;} 
+.m1-side-tools ul li {margin: 0; padding: 0;}
+
+.m1-side-register ul {float: left; list-style-type: none; padding: 0 !important; margin: 0.5em 0 0 0;} 
+.m1-side-register ul li { display: inline-block; margin: 0 0.5em 1em 0; }
+.m1-side-register a {background: #008BB3; color: #fff; font-weight: normal; letter-spacing: 0.5px; padding: 0.5em 1em;}
+.m1-side-register a:hover {text-decoration: none; background: #0AF;}
+
+#dokuwiki__aside {border-left: 1px solid #ccc; float: left; padding: 0; margin: 90px 0 0 0;}
+
+/* Footer
+*********************************************/
+#dokuwiki__footer {padding: 0 1em; background-color: #008BB3; color: #fff; font-size: 0.825em; margin: 0;}
+#dokuwiki__footer a:link, #dokuwiki__footer a:visited {text-decoration: underline; color: #fff; font-weight: normal;}
+
+
+/* Search Bar
+*********************************************/
+#dw__search .button {display: none;}
+#qsearch__in {margin: 0.5em 0 0.5em 1em; padding: 0; width: 18em !important;}
+#dw__search {margin: 0; padding: 0; width: 20em;} 
+#m1-search {background-color: #008BB3; float: right; z-index: 200; position: absolute; right: 0; top: 40px;}
+#dw__search ul li a {color: #000;}
+#dokuwiki__header form.search {margin-top: 0;}
+
+/* Breadcrumbs
+*********************************************/
+.breadcrumbs {color: #fff; background-color: #008BB3; height: 30px; line-height: 30px; overflow: hidden;}
+.trace {display: inline; padding-left: 1em;}
+#dokuwiki__header div.breadcrumbs a {color: #fff; font-weight: normal; display: inline;} 
+
+/* Button Styling
+*********************************************/
+div.dokuwiki input.button,
+div.dokuwiki button.button {
+    background: #008BB3 none; /* Change to desired color */
+    border: none; /* Change to desired color */
+    color: #fff;
+    }
+
+
+/* Font-Awesome Tweaks
+*********************************************/
+#m1-header-right .fa {padding: 0.57em 0.5em}
+#m1-header-left .fa {padding: 0.57em 0.5em;}
+
+
+/* Admin Mode Tweaks
+*********************************************/
+.mode_admin #dokuwiki__content {width: 100%; max-width: 100%}
+.mode_admin #dokuwiki__aside {display: none;}
+
+
+
+
+

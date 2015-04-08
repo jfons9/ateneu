@@ -1,0 +1,7 @@
+base   ateneuplus
+author Jordi Fons
+email  jfons@xtec.cat
+date   2014-10-23
+name   Ateneu
+desc   Complements per a wikiexport a ateneu
+url    http://ateneu.xtec.cat

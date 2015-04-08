@@ -1,0 +1,41 @@
+{
+  "core.conf":{
+    "SAVE_GUEST_PREFERENCES":false,
+    "SKIP_USER_HISTORY":true,
+    "USER_CREATE_REPOSITORY":false,
+    "USERS_LIST_COMPLETE_LIMIT":"20",
+    "USERS_LIST_COMPLETE_MIN_CHARS":"3",
+    "USERS_LIST_REGEXP_MANDATORY":false,
+    "USERS_LIST_HIDE_LOGIN":false,
+    "ALLOW_CROSSUSERS_SHARING":true,
+    "CROSSUSERS_ALLGROUPS":true,
+    "CROSSUSERS_ALLGROUPS_DISPLAY":true,
+    "USER_CREATE_USERS":true,
+    "NEWUSERS_EDIT_PARAMETERS":"email,USER_DISPLAY_NAME,lang",
+    "DIBI_PRECONFIGURATION":{
+      "sqlite3_formatDateTime":"'Y-m-d H:i:s'",
+      "sqlite3_formatDate":"'Y-m-d'",
+      "sqlite3_driver":"sqlite3",
+      "sqlite3_database":"AJXP_DATA_PATH\/plugins\/conf.sql\/pydio.db",
+      "group_switch_value":"sqlite3"
+    },
+    "GROUP_OR_ROLE":{
+      "USER":"user",
+      "group_switch_value":"Users"
+    },
+    "UNIQUE_INSTANCE_CONFIG":{
+      "instance_name":"conf.serial",
+      "USERS_DIRPATH":"AJXP_DATA_PATH\/plugins\/auth.serial",
+      "ROLES_FILEPATH":"AJXP_DATA_PATH\/plugins\/auth.serial\/roles.ser",
+      "REPOSITORIES_FILEPATH":"AJXP_DATA_PATH\/plugins\/conf.serial\/repo.ser",
+      "FAST_CHECKS":false,
+      "group_switch_value":"conf.serial"
+    }
+  },
+  "core.auth":{
+    "MASTER_INSTANCE_CONFIG":{
+      "instance_name":"auth.serial",
+      "group_switch_value":"auth.serial"
+    }
+  }
+}

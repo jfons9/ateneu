@@ -1,0 +1,10 @@
+====== Dokukiwix ======
+
+This plugin allows you to build a static HTML version of your wiki. \\
+It has been built to be used with [[http://www.kiwix.org|Kiwix]], a XUL interface by the french company [[http://www.linterweb.com|Linterweb]] which will allow you to add an offline search engine to your wiki. 
+
+This plugin needs a recent browser and Javascript activated, as it makes use of AJAX.\\
+Building an offline version of your dokuwiki takes a long time. You need to let the page open until the process has finished.
+
+
+

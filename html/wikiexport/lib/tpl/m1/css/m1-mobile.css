@@ -1,0 +1,46 @@
+/**
+ * This file provides styles for progressive enhancement of 
+ * the m1 template. See m1_screen.css for the basic styles.
+ *
+ * @author Eric Howey <ehowey@gmail.com>
+ *
+ */
+ 
+ /* === Header Changes (480px wide) === */
+ 
+ @media only screen and (min-width: 30em) {
+#m1-header-left {width: 30%;}
+#m1-header-right {width: 30%;}
+#m1-header-center {width: 40%; padding-top: 0.3em;}
+.m1-imglogo {height: 30px;}
+.secedit {display: inline-block;}
+ }
+ 
+ /* === Tablet devices - Portrait (768px wide) === */
+
+@media only screen and (min-width: 48em) {
+#m1-header-left {display: none;}
+.m1-tablet {display: inline;}
+#m1-menu {display: block;}
+#m1-header-center {float: left; width: 28%; text-align: left; padding-left: 1em;}
+#m1-header-right {float: right; width: 12%;}
+}
+
+/* === Tablet devices - Landscape (900px wide) === */
+
+@media only screen and (min-width : 56.25em) {
+.m1-desktop {display: inline;}
+#m1-menu-rtrig {display: none;}
+#m1-header-right {width: 6%;}
+#m1-header-center {width: 25%;}
+.hasSidebar #dokuwiki__content, #dokuwiki__content {max-width: 62%; float: left; margin-top: 90px;}
+#dokuwiki__aside {display: block; width: 37%;}
+.breadcrumbs {display: block;}
+#qsearch__in {margin: 0.3em 0 0.3em 1em;}
+}
+
+/* === Netbook devices (1100px wide) === */
+
+@media only screen and (min-width : 68.75em) {
+
+}

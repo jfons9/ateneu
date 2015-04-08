@@ -1,0 +1,7 @@
+05-05-11 9:27:51	10.155.114.132	INFO	jfons	Log In	
+05-05-11 9:27:51	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jfons/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+05-05-11 9:28:41	10.155.114.132	INFO	admin	Log In	
+05-05-11 9:28:55	10.155.114.132	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+05-05-11 9:29:14	10.155.114.132	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+05-05-11 9:30:30	10.155.114.132	INFO	admin	Switch Repository	rep. id=1
+05-05-11 9:31:08	10.155.114.132	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf

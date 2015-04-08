@@ -1,0 +1,22 @@
+#pl_dokukiwix_throbber {
+    visibility: hidden;
+}
+
+#pl_dokukiwix_form {
+    margin: 1em auto 2em auto;
+    vertical-align: middle;
+    width: 70%;
+    text-align: center;
+}
+
+#pl_dokukiwix_actions {
+  margin-top: 10px;
+}
+
+#pl_dokukiwix_log {
+  width:60%; 
+  height: 140px;
+  margin: 15px 0 10px 0;
+}
+
+// Setup VIM: ex: et ts=4 enc=utf-8 :

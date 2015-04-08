@@ -1,0 +1,107 @@
+#plugin__tagentry_wrapper div.taglist {
+    overflow:auto; 
+    max-height:36em; 
+    margin-bottom:.25em;
+}
+input {
+    background:  #DEE7EC; 
+    border-radius: 4px; 
+    padding-left:6px; 
+    padding-right:6px;
+    padding-top:1px; 
+    padding-bottom:2px;
+}
+
+
+.tagwfContainer {
+	border:solid 1px __border__;
+	margin-bottom:15px;
+}
+
+.tagwfContainer header {
+	background:__background_alt__;
+	padding:5px;
+	height:1.6em;
+}
+
+.tagwfContainer header h2 {
+	float:left;
+	font-weight:bold;
+	text-decoration:none;
+	margin:0;
+	border:none;
+	padding-top:0;
+	font-size:130%;
+	border:none;
+}
+
+.tagwfContainer header span.tagwfTogglers {
+	float:right;
+}
+
+.tagwfContainer .content {
+	margin:10px;
+}
+
+.tagwfContainer .users {
+	-moz-column-count:auto;
+	-moz-column-width:600px;
+	-webkit-column-count:auto;
+	-webkit-column-width:600px;
+	column-count:auto;
+	column-width:600px;
+	border-bottom:solid 1px __border__;
+	margin-bottom:5px;
+}
+
+.tagwfContainer .users header {
+	background: __background_neu__;
+}
+
+.tagwfContainer .users a {
+	display: block;
+	margin-bottom: .3em;
+}
+
+.tagwfContainer .users a.special{
+	font-weight:bold;
+}
+
+.tagwfContainer .permissions p {
+	margin-left:5px;
+}
+
+.tagwfContainer .permissions table {
+	width:100%;
+	border-collapse:collapse;
+}
+
+.tagwfContainer .permissions th {
+	background: __background_neu__;
+	padding:3px 3px 3px 5px;
+	border-bottom:dotted 1px __border__;
+}
+
+.tagwfContainer .permissions td {
+	padding:3px 3px 3px 5px;
+}
+.vContainer .permissions .tagwfItemNS, 
+.tagwfContainer .permissions .tagwfItemPage {
+	width:50%;
+}
+
+.tagwfContainer .permissions .tagwfItemPage {
+	font-style:italic;
+}
+
+.tagwfContainer .permissions .tagwfAllowed {
+	font-weight:bold;
+}
+
+.tagwfContainer .permissions .explicitUserPermission td {
+	background:__highlight__;
+}
+
+.tagwfToOverview {
+	margin-bottom:10px;
+}

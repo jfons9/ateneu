@@ -1,0 +1,4 @@
+Diese Seite zeigt die Berechtigungen für einen einzelnen Benutzer. Berechtigungen 
+für einzelne Seiten sind //kursiv gedruckt//, Berechtigungen, die explizit dem Benutzer 
+und nicht seinen Gruppen zugeordnet wurden, sind farbig hinterlegt.
+

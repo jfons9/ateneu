@@ -1,0 +1,54 @@
+.sidebar.affix {
+	top: 80px;
+}
+.sidebar_menu {
+	padding-bottom: 2px;
+	p {
+		display:block;
+		padding: 0px 8px;
+	}
+	img {
+		padding-bottom: 4px;
+	}
+	ul {
+		.nav;
+		.nav-tabs;
+		.nav-stacked;
+		border-bottom: 0px;
+	}
+	li {
+	  float: none;
+	}
+}
+
+.sidebar_menu li a {
+  display: block;
+  line-height: 20px;
+  padding: 8px 12px 8px 12px;
+  margin-right: 0px;
+  margin-bottom: -1px;
+  border: 1px solid #ddd;
+  .border-radius(0);
+}
+.sidebar_menu li  a:hover {
+  text-decoration: none;
+  background-color: #ddd;
+  border-color: #eee #eee #ddd;
+  z-index: 2;
+
+}
+.sidebar_menu .active > a,
+.sidebar_menu .active > a:hover {
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+.sidebar_menu li:first-child a {
+  .border-radius(4px 4px 0 0);
+}
+.sidebar_menu li:last-child  a {
+  .border-radius(0 0 4px 4px);
+}

@@ -1,0 +1,10 @@
+Carpeta buida
+Hi aniran els enllaços simbòlics a /dades/ewikiexport/data/cache i /dades/ewikiexport/data/tmp
+
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+?>

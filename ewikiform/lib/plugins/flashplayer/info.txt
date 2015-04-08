@@ -1,0 +1,8 @@
+# General Plugin Info do not edit
+
+author Arno Welzel',
+email  himself@arnowelzel.de',
+date   2010-10-23
+name   FlashPlayer Plugin
+desc   Embeds JW Flash Player 5.3.1397 in the page, based on the work of Sam Hall
+url    http://arnowelzel.de/wiki

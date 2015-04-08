@@ -1,0 +1,8 @@
+# General Plugin Info do not edit
+
+author Markus Birth
+email  markus@birth-online.de
+date   2009-02-09
+name   Sidebar Plugin
+desc   Base on "sidebar" template by ChrisS. Provides the same feature.
+url    http://www.dokuwiki.org/plugin:sidebar

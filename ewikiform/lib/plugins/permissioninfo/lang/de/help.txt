@@ -1,0 +1,12 @@
+In dieser Ansicht können Sie sich die Berechtigungen für jede Gruppe und die 
+Benutzer aus jeder Gruppe anzeigen lassen. 
+
+Wenn Sie mit dem Mauszeiger eine Zeitlang über einem Benutzernamen verweilen, 
+wird der Login-Name des Benutzers angezeigt.
+
+Benutzer, die von ihrer Gruppe abweichende Berechtigungen haben, sind hervorgehoben.
+
+Wenn Sie auf einen der Benutzernamen klicken, gelangen Sie auf eine Ansicht, in 
+der die Berechtigungen des Benutzers, angezeigt werden. Die Berechtigungen werden
+aus seiner Gruppenzugehörigkeit und seinen individuellen Berechtigungen ermittelt.
+

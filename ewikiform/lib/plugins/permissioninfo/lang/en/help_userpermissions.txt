@@ -1,0 +1,2 @@
+This page shows the permissions for a single user. Page permissions are printed in
+//italics//, permisssions that were assigned individually to the user, are shown in color.

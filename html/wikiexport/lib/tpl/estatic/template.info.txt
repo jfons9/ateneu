@@ -1,0 +1,7 @@
+base     estatic
+author   Jordi  Fons & Josep Ferrándiz
+email    jfons@xtec.cat
+date     2012-05-02
+name     Estatic
+desc     Plantilla per a l'exportació dels materials del Departament d'Ensenyament
+url      http://www.dokuwiki.org/template:dokuwiki

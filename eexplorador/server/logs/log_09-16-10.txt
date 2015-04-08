@@ -1,0 +1,33 @@
+09-16-10 11:16:57	10.155.114.132	INFO	admin	Log Out	
+09-16-10 11:17:11	10.155.114.132	INFO	admin	Log In	
+09-16-10 11:25:06	10.155.114.132	INFO	admin	Log Out	
+09-16-10 11:25:19	10.155.114.132	INFO	jfons	Log In	
+09-16-10 11:25:26	10.155.114.132	INFO	jfons	Log Out	
+09-16-10 13:37:44	10.155.114.132	INFO	admin	Log In	
+09-16-10 13:38:01	10.155.114.132	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+09-16-10 13:38:22	10.155.114.132	INFO	admin	Switch Repository	rep. id=1
+09-16-10 13:39:22	10.155.114.132	INFO	admin	Create Repository	repo_name=Root
+09-16-10 13:39:56	10.155.114.132	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+09-16-10 13:40:21	10.155.114.132	INFO	admin	Log Out	
+09-16-10 13:40:34	10.155.114.132	INFO	admin	Log In	
+09-16-10 13:42:01	10.155.114.132	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+09-16-10 13:42:09	10.155.114.132	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+09-16-10 13:43:08	10.155.114.132	INFO	admin	Create Dir	dir=/ewikiexport/u6y
+09-16-10 13:43:11	10.155.114.132	INFO	admin	Download	files=/ewikiexport/u6y
+09-16-10 13:43:16	10.155.114.132	INFO	admin	Move	files=/ewikiexport/u6y;destination=/recycle_bin
+09-16-10 13:43:23	10.155.114.132	INFO	admin	Delete	files=/recycle_bin/u6y
+09-16-10 13:57:47	10.155.114.132	INFO	admin	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 13:57:58	10.155.114.132	INFO	admin	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 13:58:00	10.155.114.132	INFO	admin	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 13:58:03	10.155.114.132	INFO	admin	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 13:58:22	10.155.114.132	INFO	admin	Log Out	
+09-16-10 13:59:03	10.155.114.132	INFO	jfons	Log In	
+09-16-10 13:59:03	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jfons/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 13:59:46	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 14:00:13	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 14:00:38	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 14:00:58	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 14:01:47	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 14:02:14	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/admin/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+09-16-10 14:02:57	10.155.114.132	INFO	admin	Log In	
+09-16-10 14:04:04	10.155.114.132	INFO	admin	Log Out	

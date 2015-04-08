@@ -1,0 +1,7 @@
+base     wikiformtpl
+author   Anika Henke (adaptacions Jordi Fons)
+email    anika@selfthinker.org
+date     2013-05-02
+name     Wikiformtpl Template
+desc     Adaptació  de la plantilla per defecte de DokuWiki des de 2012
+url      http://www.dokuwiki.org/template:dokuwiki

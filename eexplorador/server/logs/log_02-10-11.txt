@@ -1,0 +1,7 @@
+02-10-11 14:51:23	10.155.114.132	INFO	jfons	Log In	
+02-10-11 14:51:23	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jfons/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+02-10-11 14:51:46	10.155.114.132	INFO	jfons	Log In	
+02-10-11 14:51:47	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jfons/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+02-10-11 14:51:47	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jfons/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+02-10-11 14:51:48	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jfons/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+02-10-11 14:52:07	10.155.114.132	INFO	jfons	Log Out	

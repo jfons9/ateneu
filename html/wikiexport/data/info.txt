@@ -1,0 +1,10 @@
+Carpeta buida
+Cal omplir-la amb cache i tmp
+
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+?>

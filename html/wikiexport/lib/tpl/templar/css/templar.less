@@ -1,0 +1,145 @@
+@tbgcolor: @white;
+body {
+	background-color: @tbgcolor;
+	position: relative;
+	padding-top: 40px;
+}
+td.label {
+	background-color: @gray;
+	border-bottom: 1px solid @black;
+}
+
+//== TOC ==
+div.page #dw__toc {
+	.pull-right;
+	.well;
+	margin-left: 5px;
+	padding: 4px 8px 8px 8px;
+}
+div.sidebar #dw__toc {
+	.pull-left;
+	.well;
+	margin-left: -10px;
+	padding: 0px;
+}
+ul.toc {
+	.nav;
+	.nav-list;
+	padding-bottom: 4px;
+}
+div.page ul.toc {
+	padding-right: 4px;
+}
+#dw__toc h3.toggle {
+	.nav-header;
+	padding-bottom: 0px;
+	span {
+		padding: 3px;
+	}
+}
+ul.toc a:hover {
+	color: @white;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	background-color: @linkColor;
+	text-decoration: none;
+}
+
+//== LINKS ==
+a.wikilink2:hover {
+	text-decoration: none;
+	border: none;
+	color: @warningText;
+}
+.btn a:hover {
+	text-decoration: none;
+}
+.dokuwiki a.urlextern,
+.dokuwiki a.windows,
+.dokuwiki a.mail,
+.dokuwiki a.mediafile,
+.dokuwiki a.interwiki {
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding: 0 0 0 20px;
+}
+.dokuwiki a.urlextern {
+    background-image: url(images/external-link.png);
+    padding: 0 0 0 17px;
+}
+.dokuwiki a.windows {
+    background-image: url(images/unc.png);
+}
+.dokuwiki a.mail {
+    background-image: url(images/email.png);
+}
+
+.dokuwiki a.mediafile {
+}
+.dokuwiki a.interwiki {
+    padding: 0 0 0 17px;
+}
+
+//== OTHER ==
+textarea {
+	#grid > .core > .span(9);
+}
+#edit__summary {
+	#grid > .core > .span(8);
+}
+div.insitu-footnote {
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 1px solid @grayLight;
+  .border-radius(3px);
+}
+#config__manager td.label {
+	border-top: 1px solid @black;
+	white-space: normal;
+	min-width: 300px;
+	padding-bottom:2px;
+	span.outkey {
+		font-size: 11px;
+		padding: 0px;
+		margin-left: -7px;
+		.label;
+		background-color: @infoText;
+		a {
+			color: #cfefff;
+		}
+	}
+}
+#config__manager td.value {
+	border-top: 1px solid @black;
+	line-height: 1em;
+	select {
+		margin-bottom: 0;
+	}
+	input {
+		margin-bottom: 5px;
+	}
+	div.input {
+	  .border-radius(2px 2px 2px 2px);
+	}
+}
+h5 {
+	a {
+	color: black;
+	}
+	.lead; 
+}
+img.logo {
+	position: absolute;
+	top: 13px;
+	left: 4px;
+	z-index: 1031;
+}
+//== FIXES ==
+td.label {
+	color: @black;
+	background-color:inherit;
+	text-shadow: 0;
+	border-bottom: 0px;
+}
+code, pre {
+	.tableColumns(9);
+}

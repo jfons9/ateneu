@@ -1,0 +1,240 @@
+/**
+ * Tableless Layout for Doogies Template
+ * Based on DokuWiki default template
+ *
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author moraes <moraes@tipos.com.br>
+ * @author Robert Rackl <wiki@doogie.de>
+ * @author per a WikiForm Cristina Santamaria <csantama@xtec.cat>
+ */
+
+
+ /* MODIFICAT  */
+ 
+ /* Jordi: Comentem totes les crides a imatges per tal que no x'exportin   */
+ /* enllaços buits  */
+
+/* -------------- top row --------------- */
+div.dokuwiki .header {
+/*  background: url(images/titlebackground_center1.png);  */
+  margin: 0 10px 10px 10px;
+  top:10px;
+  height: 140px;
+  min-width: 825px; 
+  position: relative; /* important for positioning of .tabnavi */
+  z-index: 0;
+}
+
+div.dokuwiki .header_left {
+  position: absolute;
+  /*Atencio
+  top: 100px;*/
+  left: 0px;
+  width: 350px;
+  height: 140px;
+/*  background: url(images/titlebackground_left1.png) no-repeat top left; */
+  z-index: 1;
+}
+
+div.dokuwiki .logo {
+/*  background: url(images/logo.png) no-repeat top left; */
+  position: absolute;
+  top: 22px;
+  left: 12px;
+  height:100px;
+  font-size: 250%;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+
+div.dokuwiki .logo a {
+  color: __background_alt__ !important;
+  text-decoration: none !important;
+  font-variant: small-caps;
+  letter-spacing: 2pt;
+  padding-left:0px;
+}
+
+div.dokuwiki  a.logologo {
+  color: __background_alt__ !important;
+  text-decoration: none !important;
+  margin:10px;
+  padding:40px;
+  top:30px;
+}
+
+
+div.dokuwiki .header_right {
+  position: absolute;
+  /*Atencio
+  top: 100px;*/
+  right: 0px;
+  width: 475px;
+  height: 140px;
+/*  background: url(images/titlebackground_right1.png) no-repeat top right; */
+  z-index: 1;
+}
+
+div.dokuwiki .header_right a{
+/*  background: url(images/edu.png) no-repeat;  */
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  width: 170px;
+  height: 30px;
+  z-index: 2;
+}
+
+div.dokuwiki .pagename {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  font-size: 100%;
+  font-weight: bolder;
+  color: __background_alt__;
+  text-align: right;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+div.dokuwiki .pagename a {
+  color: __extern__ !important;
+  text-decoration: none !important;
+}
+
+/* ---------------  tab navigation ---------------- */
+
+/** 
+ * CSS centering trick by http://www.bluerobot.com/web/css/center2.html 
+ * tabs by http://alistapart.com/articles/slidingdoors/
+ */
+div.dokuwiki .tabnavi {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  width: 800px;
+  margin-left: -400px;
+  z-index: 5;
+}
+
+
+div.dokuwiki #tabnavi ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div.dokuwiki #tabnavi li {
+  float: left;
+  padding: 0 0 0 7px;
+  margin: 0 10px 0 0;
+/*  background: url(images/rounded-corners-left.png) no-repeat top left; */
+}
+
+div.dokuwiki #tabnavi a {
+  display: block;
+  color: __background_alt__;
+  margin: 0;
+  padding: 4px 12px 0 5px;
+/*  background: url(images/rounded-corners-right.png) no-repeat top right;  */
+  
+}
+
+div.dokuwiki #tabnavi #current {
+  color: __text__;
+  font-weight: bolder;
+  padding: 0 0 0 7px;
+  margin: 0 10px 0 0;
+/*  background: url(images/rounded-corners-left-active.png) no-repeat top left; */
+}
+
+div.dokuwiki #tabnavi #current_inner {
+  margin: 0;
+  padding: 4px 12px 1px 5px;
+/*  background: url(images/rounded-corners-right-active.png) no-repeat top right;  */
+}
+
+/* ---------------  blog and page includes ---------------- */
+
+div.dokuwiki div.hfeed {
+  
+}
+
+div.dokuwiki div.hfeed div.hentry {
+  margin-bottom: 15px;
+/*  background: url(images/gradient.png) no-repeat top; */
+}
+
+div.dokuwiki div.hfeed div.entry-content {
+  padding: 5px;
+}
+
+div.dokuwiki div.hfeed h1,
+div.dokuwiki div.hfeed h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 15px;
+}
+
+/*overwriteing include plugin's style.css*/
+div.dokuwiki div.hfeed div.inclmeta {
+  border: none;
+  padding: 0 5px 15px 15px;
+  margin: 0;
+}
+
+/*overwriteing include plugin's style.css*/
+div.dokuwiki div.inclmeta .tags {
+/*  background: transparent url(images/tag.gif) 0px 1px no-repeat;  */
+  padding: 1px 0px 1px 16px;
+  font-size: 100%;
+  text-align: left;
+  float: none;
+  clear: none;
+}
+
+
+/* ---------------  bottom bar ---------------- */
+div.dokuwiki .bar {
+  border-top: 1px solid __border__;
+  border-bottom: 1px solid __border__;
+  background: __background_alt__;
+  padding: 0 15px;
+  clear: both;
+}
+
+div.dokuwiki .bar-left {
+  float: left;
+}
+
+div.dokuwiki .bar-right {
+  float: right;
+  text-align: right;
+}
+
+div.dokuwiki #bar__bottom {
+  padding-bottom: 1em;
+  margin-bottom: 5px;
+}
+
+/* ------------- File Metadata ----------------------- */
+
+div.dokuwiki div.meta {
+  clear: both;
+  color: __text_alt__;
+  font-size: 80%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+div.dokuwiki div.meta div.user {
+  float: left;
+  padding-left: 10px;
+}
+
+div.dokuwiki div.meta div.doc {
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+09-17-10 13:19:51	10.155.12.15	INFO	admin	Log In	
+09-17-10 13:20:08	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+09-17-10 13:20:57	10.155.12.15	INFO	admin	Chmod	dir=/ewikiform/conf;filesCount=
+09-17-10 13:49:08	10.155.12.15	INFO	admin	Move	files=/html/serveis/explorador/files/tryr;destination=/recycle_bin
+09-17-10 14:03:16	10.155.12.15	INFO	admin	Move	files=/data/cache/0,/data/cache/1,/data/cache/2,/data/cache/3,/data/cache/4,/data/cache/5,/data/cache/6,/data/cache/7,/data/cache/8,/data/cache/9,/data/cache/a,/data/cache/b,/data/cache/c,/data/cache/d,/data/cache/e,/data/cache/f;destination=/recycle_bin
+09-17-10 14:03:36	10.155.12.15	INFO	admin	Delete	files=/recycle_bin/0,/recycle_bin/1,/recycle_bin/2,/recycle_bin/3,/recycle_bin/4,/recycle_bin/5,/recycle_bin/6,/recycle_bin/7,/recycle_bin/8,/recycle_bin/9,/recycle_bin/a,/recycle_bin/b,/recycle_bin/c,/recycle_bin/d,/recycle_bin/e,/recycle_bin/f,/recycle_bin/tryr

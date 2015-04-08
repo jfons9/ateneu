@@ -1,0 +1,7 @@
+base   permissioninfo
+author Gabriel Birke
+email  gb@birke-software.de
+date   2013-06-11
+name   Example Plugin to do Stuff
+desc   Displays group and user information and the permissions of users and groups
+url    https://www.dokuwiki.org/plugin:permissioninfo

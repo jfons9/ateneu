@@ -1,0 +1,39 @@
+09-21-10 8:17:10	10.155.12.15	INFO	admin	Log In	
+09-21-10 8:19:02	10.155.12.15	INFO	admin	Create File	file=//aaaa
+09-21-10 8:21:11	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-21-10 8:21:33	10.155.12.15	INFO	admin	Update Password	user_id=jferran6
+09-21-10 8:21:37	10.155.12.15	INFO	admin	Log Out	
+09-21-10 8:21:43	10.155.12.15	INFO	jferran6	Log In	
+09-21-10 8:28:13	10.155.12.15	INFO	jferran6	Log Out	
+09-21-10 8:28:21	10.155.12.15	INFO	admin	Log In	
+09-21-10 8:37:35	10.155.12.15	INFO	admin	Log Out	
+09-21-10 8:37:43	10.155.12.15	INFO	admin	Log In	
+09-21-10 8:37:51	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-21-10 9:33:47	10.155.12.15	INFO	admin	Log Out	
+09-21-10 9:33:54	10.155.12.15	INFO	jferran6	Log In	
+09-21-10 9:34:36	10.155.12.15	INFO	jferran6	Log In	
+09-21-10 9:37:51	10.155.12.15	INFO	jferran6	Log Out	
+09-21-10 9:37:58	10.155.12.15	INFO	admin	Log In	
+09-21-10 9:38:03	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-21-10 9:39:23	10.155.12.15	INFO	admin	Log Out	
+09-21-10 12:00:19	10.155.12.15	INFO	admin	Log In	
+09-21-10 12:00:23	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-21-10 12:00:29	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+09-21-10 12:01:01	10.155.12.15	INFO	admin	Move	files=/html/serveis/explorador/server/_users;destination=/recycle_bin
+09-21-10 12:01:11	10.155.12.15	INFO	admin	Delete	files=/recycle_bin/_users
+09-21-10 12:30:20	10.155.12.15	INFO	admin	Move	files=/html/serveis/proves/codinou;destination=/data/pages/z_test
+09-21-10 12:40:12	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-21-10 12:40:26	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+09-21-10 12:40:46	10.155.12.15	INFO	admin	Move	files=/eexplorador/files/aaaa;destination=/recycle_bin
+09-21-10 12:40:52	10.155.12.15	INFO	admin	Delete	files=/recycle_bin/aaaa
+09-21-10 12:51:00	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-21-10 12:51:25	10.155.12.15	INFO	admin	Switch Repository	rep. id=0
+09-21-10 12:54:28	10.155.12.15	INFO	admin	Move	files=/INSTALL-SelectMeAndClickEdit.zip;destination=/recycle_bin
+09-21-10 12:54:41	10.155.12.15	INFO	admin	Delete	files=/recycle_bin/INSTALL-SelectMeAndClickEdit.zip
+09-21-10 14:58:09	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+09-21-10 14:58:15	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+09-21-10 14:58:25	10.155.12.15	INFO	admin	Switch Repository	rep. id=77f67b5fe665d606d69e278e6cfbf04e
+09-21-10 14:58:32	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+09-21-10 14:59:09	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+09-21-10 14:59:18	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+09-21-10 14:59:26	10.155.12.15	INFO	admin	Switch Repository	rep. id=1

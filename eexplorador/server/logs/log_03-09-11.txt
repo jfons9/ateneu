@@ -1,0 +1,16 @@
+03-09-11 12:53:07	10.155.114.132	INFO	jfons	Log In	
+03-09-11 12:53:07	10.155.114.132	INFO	jfons	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/jfons/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+03-09-11 12:53:25	10.155.114.132	INFO	admin	Log In	
+03-09-11 12:53:30	10.155.114.132	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+03-09-11 12:54:02	10.155.114.132	INFO	admin	Switch Repository	rep. id=1
+03-09-11 12:56:32	10.155.114.132	INFO	admin	Create Repository	repo_name=prova
+03-09-11 13:03:35	10.155.114.132	INFO	admin	Create Repository	repo_name=s
+03-09-11 13:04:06	10.155.114.132	INFO	admin	Switch Repository	rep. id=0
+03-09-11 13:04:09	10.155.114.132	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+03-09-11 13:07:01	10.155.114.132	INFO	admin	Switch Repository	rep. id=0
+03-09-11 13:07:05	10.155.114.132	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+03-09-11 13:07:09	10.155.114.132	INFO	admin	Switch Repository	rep. id=77f67b5fe665d606d69e278e6cfbf04e
+03-09-11 13:07:12	10.155.114.132	INFO	admin	Switch Repository	rep. id=1
+03-09-11 13:09:28	10.155.114.132	INFO	admin	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/conf/repo.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+03-09-11 13:10:04	10.155.114.132	INFO	admin	Create Repository	repo_name=prova
+03-09-11 13:44:51	10.155.114.132	INFO	admin	Delete Repository	repo_id=591f41ab236162b7f77029e8e99755d0

@@ -1,0 +1,11 @@
+In this view you can see the permissions for each group and the users of each 
+group.
+
+If you hover your mouse cursor over a user name you can see his login name.
+
+Users that have individual permissions are highlighted.
+
+If you click on a user name you can see the individual permissios for the user, 
+derived from the ACL for the groups the user is a an the individual permissions 
+given to the user with the ACL. 
+

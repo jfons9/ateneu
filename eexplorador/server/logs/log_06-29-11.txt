@@ -1,0 +1,6 @@
+06-29-11 10:23:12	10.155.114.132	INFO	admin	Log In	
+06-29-11 10:23:17	10.155.114.132	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+06-29-11 10:23:44	10.155.114.132	INFO	admin	Switch Repository	rep. id=77f67b5fe665d606d69e278e6cfbf04e
+06-29-11 10:53:16	10.155.114.132	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+06-29-11 10:53:54	10.155.114.132	INFO	admin	Download	files=/wikiexport/lib/plugins/redirect/redirect.conf
+06-29-11 10:55:09	10.155.114.132	INFO	admin	Download	files=/wikiexport/lib/plugins/redirect/redirect.conf

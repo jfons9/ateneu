@@ -1,0 +1,29 @@
+             DokuKiwix - Version 0.3 "Final destination"
+                                      Yann Hamon - 2007-06-30
+
+
+1: Install the plugin with the plugin manager, in the admin section.
+2: Make sure the directory /lib/tpl/dokukiwix/archive is writable by the webserver.
+3: Get the "offline" template, and unzip it in /lib/tpl/
+4: In inc/common.php:
+
+AFTER:
+function wl($id='',$more='',$abs=false,$sep='&amp;'){
+  global $conf;
+ADD:
+  if (defined("dokukiwix_plugin")) return dokukiwix_wl($id, $more, $abs, $sep);
+
+AFTER:
+function ml($id='',$more='',$direct=true,$sep='&amp;'){
+  global $conf;
+ADD:
+  if (defined("dokukiwix_plugin")) return dokukiwix_ml($id,$more,$direct, $sep);
+
+5: Check the settings of your PHP: if you have huge pages or pages that link to several big external pictures, you may need to raise the timeout limit or the maximal memory allowed.
+
+
+You are done! Start the script from the admin panel in dokuwiki. Output will go to /lib/plugins/dokukiwix/archive/%DATE%.
+
+
+
+

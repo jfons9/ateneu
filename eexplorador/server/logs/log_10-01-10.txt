@@ -1,0 +1,45 @@
+10-01-10 10:12:54	10.155.12.15	INFO	jferran6	Log In	
+10-01-10 10:13:14	10.155.12.15	INFO	jferran6	Log Out	
+10-01-10 10:13:29	10.155.12.15	INFO	admin	Log In	
+10-01-10 10:13:34	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+10-01-10 10:13:53	10.155.12.15	INFO	admin	Chmod	dir=/;filesCount=
+10-01-10 10:15:01	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+10-01-10 10:15:12	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+10-01-10 10:15:37	10.155.12.15	INFO	admin	error	message=2 : chmod() [<a href='function.chmod'>function.chmod</a>]: Not owner in /dades/wikiform/html/serveis/explorador/plugins/access.fs/class.fsAccessDriver.php (l.1407)
+10-01-10 10:15:55	10.155.12.15	INFO	admin	error	message=2 : chmod() [<a href='function.chmod'>function.chmod</a>]: Not owner in /dades/wikiform/html/serveis/explorador/plugins/access.fs/class.fsAccessDriver.php (l.1407)
+10-01-10 10:18:26	10.155.12.15	INFO	admin	Chmod	dir=/;filesCount=
+10-01-10 10:33:58	10.155.12.15	INFO	admin	error	message=2 : chmod() [<a href='function.chmod'>function.chmod</a>]: Not owner in /dades/wikiform/html/serveis/explorador/plugins/access.fs/class.fsAccessDriver.php (l.1403)
+10-01-10 12:00:09	10.155.12.15	INFO	admin	Log In	
+10-01-10 12:00:17	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+10-01-10 12:00:21	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+10-01-10 12:01:18	10.155.12.15	INFO	admin	error	message=2 : chmod() [<a href='function.chmod'>function.chmod</a>]: Not owner in /dades/wikiform/html/serveis/explorador/plugins/access.fs/class.fsAccessDriver.php (l.1403)
+10-01-10 12:05:49	10.155.12.15	INFO	admin	Chmod	dir=/serveis/scripts;filesCount=
+10-01-10 12:06:06	10.155.12.15	INFO	admin	Chmod	dir=/serveis/scripts;filesCount=
+10-01-10 12:06:18	10.155.12.15	INFO	admin	Log Out	
+10-01-10 12:06:25	10.155.12.15	INFO	admin	Log In	
+10-01-10 12:09:02	10.155.12.15	INFO	admin	error	message=2 : chmod() [<a href='function.chmod'>function.chmod</a>]: Not owner in /dades/wikiform/html/serveis/explorador/plugins/access.fs/class.fsAccessDriver.php (l.1403)
+10-01-10 12:21:38	10.155.12.15	INFO	admin	Log Out	
+10-01-10 12:21:45	10.155.12.15	INFO	admin	Log In	
+10-01-10 12:23:42	10.155.12.15	INFO	admin	Log Out	
+10-01-10 12:32:51	10.155.12.15	INFO	prova	Log In	
+10-01-10 12:32:51	10.155.12.15	INFO	prova	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/prova/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+10-01-10 12:33:05	10.155.12.15	INFO	prova	Log In	
+10-01-10 12:33:05	10.155.12.15	INFO	prova	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/prova/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+10-01-10 12:33:46	10.155.12.15	INFO	prova	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/prova/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+10-01-10 12:33:54	10.155.12.15	INFO	prova	error	message=2 : fopen(/dades/wikiform/html/serveis/explorador/server/users/prova/rights.ser) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /dades/wikiform/html/serveis/explorador/server/classes/class.Utils.php (l.527)
+10-01-10 12:34:08	10.155.12.15	INFO	admin	Log In	
+10-01-10 12:34:20	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+10-01-10 12:35:39	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+10-01-10 12:39:02	10.155.12.15	INFO	admin	Chmod	dir=/serveis/scripts;filesCount=
+10-01-10 12:40:24	10.155.12.15	INFO	admin	Chmod	dir=/serveis/scripts;filesCount=
+10-01-10 12:47:59	10.155.12.15	INFO	admin	Switch Repository	rep. id=1
+10-01-10 12:48:12	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+10-01-10 12:48:28	10.155.12.15	INFO	admin	Move	files=/serveis/explorador/server/users/aaaa;destination=/recycle_bin
+10-01-10 12:54:01	10.155.12.15	INFO	admin	Create Dir	dir=/serveis/explorador/server/_users
+10-01-10 12:54:28	10.155.12.15	INFO	admin	Copy	files=/serveis/explorador/server/users/admin,/serveis/explorador/server/users/dobrador,/serveis/explorador/server/users/jferran6,/serveis/explorador/server/users/jfons,/serveis/explorador/server/users/prova,/serveis/explorador/server/users/smuria,/serveis/explorador/server/users/users.ser;destination=/serveis/explorador/server/_users
+10-01-10 12:54:51	10.155.12.15	INFO	admin	Rename	original=/serveis/explorador/server/users;new=__users
+10-01-10 12:54:59	10.155.12.15	INFO	admin	Rename	original=/serveis/explorador/server/_users;new=users
+10-01-10 13:03:45	10.155.12.15	INFO	admin	Move	files=/serveis/explorador/server/users;destination=/recycle_bin
+10-01-10 13:03:52	10.155.12.15	INFO	admin	Rename	original=/serveis/explorador/server/_users;new=users
+10-01-10 13:05:16	10.155.12.15	INFO	admin	Log Out	
+10-01-10 13:05:25	10.155.12.15	INFO	admin	Log In	

@@ -1,0 +1,53 @@
+/* Styler */
+div.styler-box {
+	border: 1px solid #9C8A63;
+	padding: 1em;
+}
+
+div.styler-background { background-color: #ECE8DE }
+
+div.styler-float-left { float: left; margin: 0 1em 0.5em 1em; }
+div.styler-float-right { float: right; margin: 0 1em 0.5em 1em; }
+
+div.styler-left { text-align: left; }
+div.styler-right { text-align: right; }
+div.styler-center { text-align: center; }
+div.styler-justify { text-align: justify; }
+
+/* Verse */
+div.verse {
+	border: none;
+	padding: 1em 3em;
+}
+
+div.verse pre {
+	font-family: 'Courier New', Courier, monospace;
+	color: black;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.5em;
+}
+
+div.verse pre span {
+	color: #006600;
+	font-style: italic;
+}
+
+/* epigraph */
+div.epigraph {
+	margin-left: 60%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-left: 1em;
+	font-family: Times New Roman, Georgia, Garamond, Times, serif;
+	font-style: italic;
+}
+
+/* quote */
+div.styler-quote {
+	margin-left: 3em;
+	border: 1px dotted #BBAC8C;
+	background: #F8F5EE url(images/blockquote.gif) no-repeat 0.3em 0.3em;
+	padding: 1em;
+	
+}

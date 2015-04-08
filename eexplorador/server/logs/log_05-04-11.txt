@@ -1,0 +1,9 @@
+05-04-11 13:07:12	10.155.12.15	INFO	jferran6	Log In	
+05-04-11 13:07:24	10.155.12.15	INFO	jferran6	Log Out	
+05-04-11 13:13:30	10.155.12.15	INFO	admin	Log In	
+05-04-11 13:13:49	10.155.12.15	INFO	admin	Switch Repository	rep. id=13834c046aecafd9a1011cb625f28b63
+05-04-11 13:14:01	10.155.12.15	INFO	admin	Switch Repository	rep. id=f5fd70590f38b94ae662536cde00c0bf
+05-04-11 13:14:58	10.155.12.15	INFO	admin	Create Dir	dir=/serveis/geogebra_old
+05-04-11 13:16:01	10.155.12.15	INFO	admin	Copy	files=/serveis/geogebra/geogebra.jar;destination=/serveis/geogebra_old
+05-04-11 13:18:37	10.155.12.15	INFO	admin	Move	files=/serveis/geogebra_old;destination=/recycle_bin
+05-04-11 14:16:42	10.155.12.15	INFO	admin	Log Out	

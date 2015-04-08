@@ -1,0 +1,54 @@
+<?php
+/**
+ * Example footer include
+ *
+ * This file shows you how to use the include hooks. However I recommend to
+ * create your own complete new template instead.
+ */
+
+if(strpos($_SERVER["REQUEST_URI"], 'index') == false) { 
+  echo '<br /><br />
+  <a href="#inici" title="Inici pàgina"><img src="'.DOKU_TPL.'images/up.gif" alt="Inici"/></a>';
+  //<!-- <a href="index" title="Inici mòdul"><img src="'.DOKU_TPL.'images/home.gif" alt="inici"/></a>';
+}
+
+ $tgt = ($conf['target']['extern']) ? 'target="'.$conf['target']['extern'].'"' : '';
+?> 
+ <div class="footerinc">
+  <hr />
+  <table style="width: 100%;">
+  <tr style="vertical-align: middle;">
+    <td  style="width: 18%; ">
+      <div style="float: left;">
+      <a <?php echo $tgt?> href="/wikiform" title="Materials i recursos per a la formació"><img src="<?php echo DOKU_TPL; ?>images/ateneu2.png" width="91" height="30" alt="Materials i recursos per a la formació" /></a>
+      </div> 
+    </td>
+    <td style="width: 32%;">
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.ca" target="_blank" ><img title="Creative Commons" alt="Creative Commons License" style="border-width:0" src="<?php echo DOKU_TPL; ?>images/cc.png" /></a>
+    </td>
+    <td style="width: 32%;">
+   
+      <a <?php echo $tgt?>href="http://www.dokuwiki.org/" target="_blank" title="DokuWiki"><img src="<?php echo DOKU_TPL; ?>images/button-dw.png" width="80" height="15" alt="DokuWiki" /></a>
+   
+    </td>	
+	<td style="width: 18%;">
+      <div style="float: right;">
+      <a <?php echo $tgt?>href="http://odissea.xtec.cat"  target="_blank" title="Entorn virtual de formació"><img src="<?php echo DOKU_TPL; ?>images/odissea2.png" width="98" height="30" alt="Entorn virtual de formació" /></a>
+      </div>
+    </td>
+  </tr>  
+  </table>
+
+</div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60938041-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

@@ -1,0 +1,79 @@
+//== RESPONSIVE ==
+//== Large Desktop ==
+@media (min-width: 1200px) {
+	body {
+		padding-top: 40px;
+	}
+  .sidebar {
+    width: 168px;
+  }
+  .sidebar.affix {
+    width: 168px;
+  }
+}
+
+//== Desktop ==
+@media (min-width: 980px) and (max-width: 1199px) {
+	body {
+		padding-top: 40px;
+	}
+  .sidebar.affix {
+    width: 139px;
+  }
+}
+
+//== Tablet to desktop ==
+@media (min-width: 768px) and (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+  .sidebar.affix {
+	width: 105px;
+	top: 40px;
+  }
+  .navbar {
+	margin-bottom: 0px;
+  }
+  .breadcrumb {
+  	margin-top: 0px;
+  }
+}
+
+//== Tablet ==
+@media (max-width: 767px) {
+  body {
+    padding-top: 0px;
+  }
+  .navbar {
+	margin-bottom: 0px;
+  }
+  .breadcrumb {
+  	margin-top: 0px;
+  }
+  .sidebar.affix {
+	position: static;
+	width: auto;
+	top: 40px;
+  }
+}
+
+.dokuwiki .wikilink2 {
+	text-decoration: none;
+	border-bottom: 1px dashed;
+}
+
+td.leftalign,th.leftalign {
+	text-align: left;
+}
+td.rightalign,th.rightalign {
+	text-align: right;
+}
+td.centeralign, th.centeralign {
+	text-align: center;
+}
+input[type=submit] {
+	margin: 2px 0px 2px 0px;
+}
+input[type=checkbox] {
+	margin: 5px 2px;
+}

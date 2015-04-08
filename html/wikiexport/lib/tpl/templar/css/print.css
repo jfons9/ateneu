@@ -1,0 +1,17 @@
+.navbar {
+	display:none;
+}
+div.notify, div.info, div.success, div.error,
+#dokuwiki__header .tools, #dokuwiki__aside,
+#dokuwiki__header .breadcrumb, .dokuwiki .toc, .dokuwiki .secedit,
+#dokuwiki__pagetools {
+    display: none;
+}
+.dokuwiki a.urlextern,
+.dokuwiki a.windows,
+.dokuwiki a.mail,
+.dokuwiki a.mediafile,
+.dokuwiki a.interwiki {
+    background: none;
+    padding: 0px;
+}

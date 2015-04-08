@@ -1,0 +1,7 @@
+base     m1
+author   Eric Howey
+email    ehowey@gmail.com
+date     2014-5-29
+name     m1 Template
+desc     Responsive and mobile first template
+url      http://www.dokuwiki.org/template:m1

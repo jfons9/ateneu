@@ -1,0 +1,92 @@
+.piContainer {
+	border:solid 1px __border__;
+	margin-bottom:15px;
+}
+
+.piContainer header {
+	background:__background_alt__;
+	padding:5px;
+	height:1.6em;
+}
+
+.piContainer header h2 {
+	float:left;
+	font-weight:bold;
+	text-decoration:none;
+	margin:0;
+	border:none;
+	padding-top:0;
+	font-size:130%;
+	border:none;
+}
+
+.piContainer header span.piTogglers {
+	float:right;
+}
+
+.piContainer .content {
+	margin:10px;
+}
+
+.piContainer .users {
+	-moz-column-count:auto;
+	-moz-column-width:150px;
+	-webkit-column-count:auto;
+	-webkit-column-width:150px;
+	column-count:auto;
+	column-width:150px;
+	border-bottom:solid 1px __border__;
+	margin-bottom:5px;
+}
+
+.piContainer .users header {
+	background: __background_neu__;
+}
+
+.piContainer .users a {
+	display: block;
+	margin-bottom: .3em;
+}
+
+.piContainer .users a.special{
+	font-weight:bold;
+}
+
+.piContainer .permissions p {
+	margin-left:5px;
+}
+
+.piContainer .permissions table {
+	width:100%;
+	border-collapse:collapse;
+}
+
+.piContainer .permissions th {
+	background: __background_neu__;
+	padding:3px 3px 3px 5px;
+	border-bottom:dotted 1px __border__;
+}
+
+.piContainer .permissions td {
+	padding:3px 3px 3px 5px;
+}
+.piContainer .permissions .piItemNS, 
+.piContainer .permissions .piItemPage {
+	width:50%;
+}
+
+.piContainer .permissions .piItemPage {
+	font-style:italic;
+}
+
+.piContainer .permissions .piAllowed {
+	font-weight:bold;
+}
+
+.piContainer .permissions .explicitUserPermission td {
+	background:__highlight__;
+}
+
+.piToOverview {
+	margin-bottom:10px;
+}

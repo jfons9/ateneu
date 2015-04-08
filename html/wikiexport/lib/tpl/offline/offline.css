@@ -1,0 +1,290 @@
+/*
+** Feuille de style ajoutee a celle d'ubuntufr.css
+** Par Methu.
+** Template original par mauriz.
+*/
+
+body {
+  background-color: white;
+}
+
+/* GENERAL (balises en) ****************************************************/
+hr { visibility:visible; clear:none; margin:10px 0; } /* Merci ubuntufr.css */
+
+/* MAIN ********************************************************************/
+#main input.button {
+  border: 1px solid #986601;
+  border-right:4px solid #816647;
+  background-color:transparent;
+  margin-right:5px;
+  margin-left:5px;
+  width:170px;
+  float:right;
+  font-size:.7em;
+  padding:0;
+  margin:0;
+  width:50px;
+}
+#main input.button:hover {
+  background-color:#AD9060;
+  cursor:pointer;
+}
+#main p {margin-top:10px}
+#main p {text-indent:10px}
+#main h2#pagetitle {
+  margin-bottom:30px;
+  font-size:2em;
+  font-family:Verdana, serif;
+  color:#816647;
+  margin-top: 5px;
+}
+#main h2#pagetitle a {color:#565248}
+#main blockquote>blockquote {
+  border:none;
+  border-left:4px solid #816647;
+  border-top:1px dotted #816647;
+  background:#D9BB7A url(http://www.ubuntu-fr.org/css/img/blockquote.png) no-repeat left top;
+  padding:10px 0 0 10px;
+  margin:5px 0 0 0px;
+}
+#main blockquote>blockquote:before{
+  content:"Re :";
+}
+
+/* TABLEAU *****************************************************************/
+#main caption {height:5px}
+#main table {
+  margin:10px auto;
+  border-collapse:collapse;
+}
+#main table th {
+  color:black;
+  font-size:.8em;
+  background-color:#D9BB7A;
+  border:1px solid #986601;
+}
+#main table td {
+  border:1px solid;
+  text-align:left;
+  padding:5px;
+  height:2em;
+  vertical-align:middle;
+  border:1px solid #986601;
+}
+/* Diff rendering */
+table.diff {background:white}
+td.diff-blockheader {
+  font-weight:bold;
+  background-color:#D9BB7A;
+}
+td.diff-header {
+  font-size:1.3em;
+}
+td.diff-addedline {
+  background:#E6EBFF;
+  font-size:1.2em;
+  color:black;
+}
+td.diff-deletedline { 
+  background:#FFF0F0;
+  font-size:1.2em;  
+  color:black;
+}
+td.diff-context {
+  background:#f7f9fa;
+  font-size:1.2em; 
+}
+span.diffchange {
+  font-weight:bold;
+   color:red;
+}
+
+/* Edit zone ***************************************************************/
+#main td textarea.edit {
+  width:99%;
+  margin:0 auto;
+  border:none;
+}
+#main td.toolbar {text-align:center}
+#main td.toolbar a {
+  margin:0;
+  padding:0;
+}
+#main td.toolbar img {
+  padding:0;
+  margin:0 3px;
+}
+#main #summary {
+  display:block;
+  margin:0;
+}
+#main form table input.button {
+  font-size:.9em;
+  padding:2px;
+  margin:2px 0;
+  width:99%;
+  border-left:4px solid #816647;
+}
+
+/* (TIC TAC) Table Of Content **********************************************/
+div.toc {
+  float:right;
+  width:250px;
+  margin:0;
+  padding:0 0 20px 20px; /* Pour IE */
+  background-color:white;
+}
+div.tocheader {
+  border: 1px solid #986601;
+  border-bottom:none;
+  background-color:#D9BB7A;
+  text-align:center;
+  font-weight:bold;
+}
+div#toc__inside {
+  border: 1px solid #986601;
+}
+.toc ul {
+  margin:0;
+  padding-left:20px;
+}
+.toc li {
+  padding-left:0;
+  font-size:.9em;
+}
+.toc li a {text-decoration:none}
+.toc li a:hover {text-decoration:underline}
+
+.toc #toc__show, .toc #toc__hide {width:13px; height: 10px; float: left; margin: 4px 0 0 4px;}
+
+/* CODE ********************************************************************/
+#main pre.code {
+  background-color:#565248;
+  border:none;
+  border-left:4px solid #000000;
+  overflow:auto;
+  margin:0 0 10px 0;
+}
+
+/* LIENS *******************************************************************/
+a {
+  color:#436976;
+  text-decoration:none;
+}
+a:hover {
+  color:#000000;
+  text-decoration:underline;
+}
+/* external link */
+a.urlextern{
+    background: transparent url(images/link_icon.gif) no-repeat 0px 1px;
+    padding: 1px 0px 1px 16px;
+    color:#436976;
+    text-decoration:none;
+}
+a.urlextern:visited {color:Purple}
+a.urlextern:hover {
+  text-decoration:underline;
+  background: transparent url(images/link_icon.gif) no-repeat 0px 1px;
+}
+/* windows share */
+a.windows{
+    background: transparent url(images/windows.gif) no-repeat 0px 1px;
+    padding: 1px 0px 1px 16px;
+    color:#436976;
+    text-decoration:none;
+} 
+a.windows:visited {color:Purple}
+a.windows:hover {
+  text-decoration:underline;
+  background: transparent url(images/windows.gif) no-repeat 0px 1px;
+}
+/* interwiki link */
+a.interwiki{
+  background:transparent url(images/interwiki.png) no-repeat 0px 1px;
+  padding-left: 16px;
+  color:#436976;
+  text-decoration:none;
+}
+a.interwiki:visited {color:Purple}
+a.interwiki:hover {
+  text-decoration:underline;
+  background:transparent url(images/interwiki.png) no-repeat 0px 1px;
+}
+/* link to some embedded media */
+a.media {
+  color:#436976;
+  text-decoration:none;
+}
+a.media:hover {
+  color:#436976;
+  text-decoration:underline;
+}
+/* email link */
+a.mail {
+  background: transparent url(images/mail_icon.gif) no-repeat 0px 1px;
+  padding: 1px 0px 1px 16px;
+  color:#436976;
+  text-decoration:none;
+}
+a.mail:hover {text-decoration:underline}
+/* existing wikipage */
+a.wikilink1:link    { color:#009900; text-decoration:none }
+a.wikilink1:visited { color:#009900; text-decoration:none }
+a.wikilink1:hover   { color:#009900; text-decoration:underline }
+
+/* not existing wikipage */
+a.wikilink2:link    { color:#FF3300; text-decoration:none }
+a.wikilink2:visited { color:#FF3300; text-decoration:none }
+a.wikilink2:hover   { color:#FF3300; text-decoration:underline }
+
+/* notes */
+div.JSpopup {
+	background:#D9BB7A;
+	border-left:4px solid #816647;
+	border-bottom:1px dotted #816647;
+	border-right:1px dotted #816647;
+	border-top:1px dotted #816647;
+	padding:5px;
+
+}
+a.fn_top{ 
+	font-size:70%;
+	vertical-align:super
+}
+
+/* iPage Info ******************************************************************/
+#pageinfo{
+  text-align:right;
+  font-size:0.8em;
+  color:#638c9c;
+}
+
+/* FOOTER ******************************************************************/
+#footer {clear:none} /* Permet de le garder en dessous de #main */
+#footer p {margin:0}
+
+/* Les medias **************************************************************/
+img.media {
+  margin:3px;
+}
+
+img.medialeft {
+  border:0;
+  float:left;
+  margin:0 1.5em 0 0;
+}
+
+img.mediaright {
+  border:0;
+  float:right;
+  margin:0 0 0 1.5em;
+}
+
+img.mediacenter {
+  border:0;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
