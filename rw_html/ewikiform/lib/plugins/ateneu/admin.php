@@ -73,18 +73,7 @@ class admin_plugin_ateneu extends DokuWiki_Admin_Plugin {
 
         // Associate groups with users and set the data in $this->group2user
         $this->_group2user();
-/*
-        $helper = $this->loadHelper('ateneu'); // or $this->loadHelper('tag', true);
-        if ($helper) {
-            $esquelet = $helper->indexArray();
-            $cursos = $helper->getCursos($esquelet);
-        }
- * 
- */
 
-        //echo $conf['datadir'];
-        //echo "<BR>".DOKU_INC;
-        //print_r($conf);
         // If we show permissions for an individual user, collect its permissions
         if ($INPUT->has('show') && $INPUT->has('user')) {
             $this->_userPermissions($INPUT->str('user'));
@@ -189,21 +178,9 @@ class admin_plugin_ateneu extends DokuWiki_Admin_Plugin {
 
         $marcats = $this->getCursosMarcats($fitxer_marcats);
 
-
         $helper = $this->loadHelper('ateneu'); // or $this->loadHelper('tag', true);
         $esquelet = $helper->indexArray();
         $cursos = $helper->getCursos($esquelet);
-        //       }
-        // echo "<pre>";
-        // print_r($marcats);
-        //       print_r($INPUT);
-        // print_r($marcats);
-        /*  echo "</pre>";
-          foreach($cursos as $c){
-          echo $c['cami']."\n";
-          } */
-
-        //echo "</pre>";
         $compta = 0;
 
         ptln('<h1>' . $this->titol . '</h1>');
@@ -308,57 +285,6 @@ class admin_plugin_ateneu extends DokuWiki_Admin_Plugin {
     }
 
     /**
-     * Shows an overview for users in groups and permissions assigned to groups
-     */
-    /*
-    function _groupOverview() {
-        $id = cleanID($this->getLang('menu'));
-        ptln('<h1><a name="' . $id . '" id="' . $id . '">' . $this->getLang('menu') . "</a></h1>");
-        echo $this->locale_xhtml('help');
-
-        foreach ($this->groups as $gname => $g) {
-            // container for group information
-            ptln('<section class="piContainer">');
-            // print group header
-            ptln('<header>', 2);
-            ptln("<h2>$gname</h2>", 4);
-            ptln('</header>', 2);
-
-            ptln('<div class="content">', 2);
-
-            // print acl settings for this group 
-            ptln('<header>' . $this->getLang('permissions') . '</header>', 4);
-            $this->_permissionTable($this->aclGroupPermissions[$gname], "permissions" . $gname);
-
-            // print users in group
-            if (!empty($this->group2user[$gname])) {
-                ptln('<header>' . $this->getLang('users') . '</header>', 4);
-                ptln('<div class="users">', 4);
-                foreach ($this->group2user[$gname] as $u) {
-                    $url = wl($ID, array(
-                        'do' => "admin",
-                        'page' => $this->getPluginName(),
-                        'show' => 'userpermissions',
-                        'user' => $u
-                    ));
-                    $u_enc = auth_nameencode($u);
-                    $lnk = '<a href="' . $url . '"  title="' . $u . '" ' . (!empty($this->aclUserPermissions[$u_enc]) ? 'class="special"' : "") . '>';
-                    ptln($lnk . $this->users[$u]['name'] . '</a>', 6);
-                }
-                ptln('   </div>');
-            }
-
-            // close content div
-            ptln('</div>', 2);
-
-            //end container
-            ptln('</section>');
-        }
-    }
-     * 
-     */
-
-    /**
      * Mostra la informació sobre tot els cursos
      */
     function _cursosOverview() {
@@ -373,8 +299,6 @@ class admin_plugin_ateneu extends DokuWiki_Admin_Plugin {
         ptln('<h1>' . $this->titol . '</h1>');
         ptln('<h2>Info dels cursos</h2>');
         ptln($this->menu());
-
-//        echo $this->locale_xhtml('help');
 
         $fitxer_marcats = $this->arrel . "z_gestio/aux/infocursos.txt";
         $marcats = $this->getCursosMarcats($fitxer_marcats);
@@ -488,105 +412,6 @@ class admin_plugin_ateneu extends DokuWiki_Admin_Plugin {
     }
 
     /**
-     * Show permissions for individual user, highlight permissions that were 
-     * assigned explicitly to this user.
-     */
-    /*
-    function _showUserPermissions() {
-        $head = sprintf($this->getLang('pi_permissionfor'), $this->username);
-        $id = cleanID($head);
-        ptln('<h1><a name="' . $id . '" id="' . $id . '">' . $head . "</a></h1>");
-        echo $this->locale_xhtml('help_userpermissions');
-
-        // Link to Overview
-        $url = wl($ID, array(
-            'do' => "admin",
-            'page' => $this->getPluginName(),
-            'show' => 'overview'
-        ));
-        ptln('<p class="piToOverview"><a href="' . $url . '">' . $this->getLang('pi_to_overview') . "</a></p>");
-
-        ptln('<div class="piContainer">');
-        $this->_permissionTable($this->userPermissions, 'Userpermissions');
-        ptln('</div>');
-    }
-     * 
-     */
-
-    /**
-     * Print permissions for a user or group
-     * @param array $acldata namespace/page_name=>permission pairs
-     * @param string $id ID for the div that surrounds the table
-     */
-    /*
-    function _permissionTable($acldata) {
-        $displayed_permissions = array(
-            AUTH_READ,
-            AUTH_EDIT,
-            AUTH_CREATE,
-            AUTH_UPLOAD,
-            AUTH_DELETE
-        );
-        ptln("   <div class='permissions'>");
-        if (empty($acldata)) {
-            ptln("    <p>" . $this->getLang('pi_no_permissions_found') . '</p>');
-            ptln("    </div>");
-            return;
-        }
-
-        ptln("   <table>");
-        $s = "<tr><th>" . $this->getLang('pi_resource') . "</th>";
-        foreach ($displayed_permissions as $p)
-            $s .= "<th>" . $this->getLang('acl_perm' . $p) . "</td>";
-        ptln($s . "</tr>", 6);
-
-
-        $even = false;
-        foreach ($acldata as $item => $perm) {
-            $additional_class = empty($this->explicitUserPermissions[$item]) ? "" : " explicitUserPermission";
-            ptln('<tr class="' . ($even ? "even" : "odd") . $additional_class . '">', 6);
-            if (preg_match('/\*\s*$/', $item))
-                ptln('<td class="piItemNS">' . $item . '</td>', 9);
-            else
-                ptln('<td class="piItemPage">' . $item . '</td>', 9);
-            foreach ($displayed_permissions as $p) {
-                if ($p & $perm)
-                    ptln('<td class="piAllowed">X</td>', 9);
-                else
-                    ptln('<td class="piDenied">-</td>', 9);
-            }
-            $even = !$even;
-        }
-        ptln("   </table>");
-        ptln("   </div>");
-    }
-     * 
-     */
-
-    /**
-     * This just gets a very rudimentary user and not very useful user list - 
-     * only users who have special permissions in the ACL are listed. 
-     * @return array This array is structured similar to the array returned by an auth class.
-     */
-    /*
-    function _getUsersFromACL() {
-        global $AUTH_ACL;
-        $users = array();
-        foreach ($AUTH_ACL as $a) {
-            // Don't parse comments
-            if (preg_match('/^#/', $a))
-                continue;
-            if (preg_match('/^[^\s]+\s([^@\s]+)/', $a, $matches)) {
-                $usr_arr = array('name' => $matches[1], 'grps' => array());
-                $users[$matches[1]] = $usr_arr;
-            }
-        }
-        return $users;
-    }
-     * 
-     */
-
-    /**
      * This function retrieves group names from the acl file.
      * Since none of the existing auth classes supports groups, I don't know 
      * what output to expect from them. I assume a two-dimensional hash similar 
@@ -608,30 +433,7 @@ class admin_plugin_ateneu extends DokuWiki_Admin_Plugin {
         return $groups;
     }
 
-    /**
-     * sets $this->aclGroupPermissions in the form of a[groupname][namespace/page_name]=permission
-     */
-    /*
-      function _aclGroupPermissions() {
-      $AUTH_ACL = $this->_auth_loadACL(); //without %USER% replacement
-      $gp = array();
-      foreach ($AUTH_ACL as $a) {
-      // Don't parse comments
-      if (preg_match('/^#/', $a))
-      continue;
-      if (preg_match('/^([^\s]+)\s@([^\s]+)\s(\d+)/', $a, $matches)) {
-      $gp[$matches[2]][$matches[1]] = $matches[3];
-      }
-      }
-      $this->aclGroupPermissions = array();
-      foreach ($gp as $grpname => $permissions) {
-      ksort($permissions);
-      $this->aclGroupPermissions[urldecode($grpname)] = $permissions;
-      }
-      }
-     * 
-     */
-
+    
     /**
      * sets $this->aclGroupPermissions in the form of a[groupname][namespace/page_name]=permission
      */

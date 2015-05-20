@@ -97,8 +97,8 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
         );
     }
 
-    /*
-     *  Funció getCurs
+    /**
+     *  getCurs
      * 
      *  Recupera el codi del curs
      *  
@@ -109,7 +109,6 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
      *  @author Jordi Fons
      * 
      */
-
     function getCurs($url) {
         global $conf;
 
@@ -118,9 +117,7 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
         } else {
             $separador = "/";
         }
-        //  if ($tipus == 2)
-        //      $separador = "/";
-        //echo $separador;
+
         $items = explode("$separador", $url);
 
         $fet = 0;
@@ -156,8 +153,8 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
         return $cursos;
     }
 
-    /*
-     *  Funció getTitolCurs
+    /**
+     *  getTitolCurs
      * 
      *  Recupera títols del curs
      *  Torna títol
@@ -167,7 +164,6 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
      *  @author Jordi Fons
      * 
      */
-
     function getTitolCurs($pagina, $tipus = "1") {
         global $conf;
 
@@ -181,7 +177,6 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
 
         $existeix = false;
         // Llegeix l'arxiu index.txt on ha d'haver-hi el títol del curs    
-        //$linies = file('/dades/wikiform/data/pages/' . $fitxer . ".txt");
         if (substr($fitxer, -4) == ".txt") {
             //$linies = file($conf['datadir'] . $fitxer);
             $linies = file($this->arrel . $fitxer);
@@ -219,8 +214,8 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
         return $titol;
     }
 
-    /*
-     *  Funció indexArray
+    /**
+     *  indexArray
      * 
      *  Genera array amb amb els fitxers index principals
      *  Torna array 
@@ -232,10 +227,8 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
      *  @author Jordi Fons
      * 
      */
-
     function indexArray($directory = '', $pattern = 'index.txt', $recursive = true) {
         global $conf;
-        //print_r($conf);
 
         if ($directory == '') {
             $directory = $this->arrel;
@@ -259,7 +252,7 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
                         $subdirs = $this->_hasSubdirs($newdir);
                         $principal = $this->esPrincipal(str_replace("//", "/", $directory));
                         $ext = substr(strtolower($file), -strlen($pattern));
-                        //echo $ext."<br>";
+
                         // si no és un directori && és index.txt && té subdirectoris && no és fase_3 (fic_orientacions) ...                         
                         if (!is_dir($file) && ($ext == $pattern) && $subdirs && $principal && strpos($directory, "fase_3") === false) {
                             $file = $directory . "/" . $file;
@@ -279,15 +272,15 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
         return $array_items;
     }
 
-    /*
-     * Funció: _has_subdirs
+    /**
+     * _has_subdirs
+     * 
      * Verificar si un directori donat conté subdirectoris
      * 
      * @param $path string
      * 
      * Retorna true si el camí indicat ($path) conté altres directoris
      */
-
     function _hasSubdirs($path) {
         if (is_dir($path)) {
             if ($dh = opendir($path)) {
@@ -313,8 +306,8 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
         return TRUE;
     }
 
-    /*
-     *  Funció llegeixIndexCurs()
+    /**
+     * llegeixIndexCurs()
      * 
      * Llegeix el contingut del fitxer index.txt principal
      * Recupera títols del curs i de cada mòdul
@@ -324,7 +317,6 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
      *    
      * @author Jordi Fons
      */
-
     function llegeixIndexCurs($fitxer) {
 
         if (!file_exists($fitxer))
@@ -378,15 +370,6 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
             }
         }
 
-        /*    if (!$existeix) {
-          if ($no_concorda)
-          $fitxer = "DISCORDANÇA: " . $fitxer;
-          else
-          $fitxer = "SENSE TÍTOL: " . $fitxer;
-          write_error('errors.log', "\n" . $fitxer, 'a');
-          }
-         * 
-         */
         return $info;
     }
 
@@ -397,11 +380,9 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
      * @global type $conf
      * @param type $url
      * @return int
-     */
-    
+     */ 
     function esPrincipal($url) {
         global $conf;
-
 
         if (strpos($url, ':') !== false) {
             $separador = ":";
@@ -410,7 +391,6 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
         }
 
         $items = explode("$separador", $url);
-        //echo $url.": " . $items[count($items) - 2]." --> ";
         
         // llegim  array amb els directoris "contenidors"
         $directoris = $conf['directoris'];
@@ -420,13 +400,12 @@ class helper_plugin_ateneu extends DokuWiki_Plugin {
         } else {
             $principal = 0;
         }
-        //echo $principal."<br>";
+
         return $principal;
     }
 
 }
 
-// vim:ts=4:sw=4:et:
 
 
 

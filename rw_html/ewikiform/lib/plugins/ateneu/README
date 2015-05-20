@@ -1,6 +1,7 @@
 Ateneu Plugin for DokuWiki
 
 Plugin per al suport a la gestió de cursos i materials de l'entorn Ateneu
+Algunes funcions estan basades en el plugin 'permissioninfo'
 
 All documentation for this plugin can be found at
 http://ateneu.xtec.cat
