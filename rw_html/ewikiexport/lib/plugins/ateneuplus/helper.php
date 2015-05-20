@@ -156,7 +156,7 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
         return $cursos;
     }
 
-    /*
+    /**
      *  Funció getTitolCurs
      * 
      *  Recupera títols del curs
@@ -167,7 +167,6 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
      *  @author Jordi Fons
      * 
      */
-
     function getTitolCurs($pagina, $tipus = "1") {
         global $conf;
 
@@ -232,9 +231,7 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
      */
     function get_titol($pagina, $tipus = "1") {
         global $conf;
-
-        //$pagina = getNS($pagina);
-
+ 
         $base_inici = trim($this->get_base($_SERVER["REQUEST_URI"]));
        
         if ($tipus == 2){
@@ -248,13 +245,7 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
         // Si exiteix el fitxer ini.txt llegim el títol i codi i els tornem ...
         if (file_exists($fitxerini)) {
             $ini = $this->get_ini($pagina);
-            /*
-              $codi = '';
-              if (trim($ini['codi']) != '') {
-              $codi = $ini['codi'] . " - ";
-              }
-             * 
-             */
+
             if (isset($ini['mostratitol']) and trim($ini['mostratitol']) == "1" and isset($ini['titol']) and ! empty($ini['titol'])) {
                 $codi = '';
                 if (!empty($ini['codi'])) {
@@ -281,10 +272,7 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
                     }
                 }
             }
-            //  echo "|".$titol."|";
-            // si a primera línia hi ha definit <!--nomeu--> sortim sense cap títol
-            //if ($titol == 'nomenu')
-            //    return 'nomenu';
+ 
         }
 
         return $titol;
@@ -375,7 +363,6 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
             $num_prac = count($data_moduls);
         }
 
-
         $ini = $this->get_ini($ID);
 
         if (isset($ini['menu'])) {
@@ -386,127 +373,18 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
         if ($cleanName != '')
             $cleanName = ' - ' . $cleanName;
 
-
-
-        //       print_r($ini);
         // Si l'array ini té com a mínim un element (està ple)
-        if (count($ini) > 0 and trim($ini['mostrasubtitol']) == "1" and trim(substr($cleanName, 2)) != 'ini') {
+/*        if (count($ini) > 0 and trim($ini['mostrasubtitol']) == "1" and trim(substr($cleanName, 2)) != 'ini') {
             
         } else {
             
         }
-
-
-        /*
-          if (isset($ini) and trim($ini['mostrasubtitol']) == "1" and trim(substr($cleanName, 2)) != 'ini') {
-          print('<div class="subtitol">' . substr($cleanName, 2) . '</div>');
-          // afegit comprovació 'tag' per tal que no es mostri titol a pàgina resum de tags
-          } else if (!isset($ini) and $titolcurs['nomenu'] != 1 and $base_inici != "tag" and trim(substr($cleanName, 2)) != 'ini') {
-          print('<div class="subtitol">' . substr($cleanName, 2) . '</div>');
-          //  print('<div class="subtitol">'.str_replace('.html', '', substr($cleanName,2)).'</div>');
-          }
-         * 
-         * 
-         */
-
+ * 
+ */
         return substr($cleanName, 2);
     }
 
-    /*
-     *  Funció indexArray
-     * 
-     *  Genera array amb amb els fitxers index principals
-     *  Torna array 
-     *  
-     *  @param $directory string
-     *  @param $pattern int
-     *  @recursive 
-     *
-     *  @author Jordi Fons
-     * 
-     */
-
-    function indexArray($directory = '', $pattern = 'index.txt', $recursive = true) {
-        global $conf;
-        //print_r($conf);
-
-        if ($directory == '') {
-            $directory = $this->arrel;
-        }
-        $array_items = array();
-
-        if ($handle = opendir($directory)) {
-
-            while (false !== ($file = readdir($handle))) {
-                if ($file != "." && $file != "..") {
-                    if (is_dir($directory . "/" . $file)) {
-
-                        if ($recursive) {
-                            if (substr($file, 0, 4) != ".tmp" and substr($file, 0, 2) != "z_") {
-                                $array_items = array_merge($array_items, $this->indexArray($directory . "/" . $file, $pattern, $recursive));
-                            }
-                        }
-                    } else { // No és un directori
-                        // mirar si s'inclou a la llista
-                        $newdir = str_replace("//", "/", $directory) . '/';
-                        $subdirs = $this->_hasSubdirs($newdir);
-                        $principal = $this->esPrincipal(str_replace("//", "/", $directory));
-                        $ext = substr(strtolower($file), -strlen($pattern));
-
-                        // si no és un directori && és index.txt && té subdirectoris && no és fase_3 (fic_orientacions) ...                         
-                        if (!is_dir($file) && ($ext == $pattern) && $subdirs && $principal && strpos($directory, "fase_3") === false) {
-                            $file = $directory . "/" . $file;
-                            $array_items[] = preg_replace("/\/\//si", "/", $file);
-                        }
-                    }
-                }
-            }
-            closedir($handle);
-        }
-        foreach ($array_items as &$item) {
-            $item = str_replace($this->arrel, "", $item);
-        }
-        $this->_deleteFromArray($array_items, $pattern, $useOldKeys = FALSE);
-        $result = natsort($array_items);
-
-        return $array_items;
-    }
-
-    /*
-     * Funció: _has_subdirs
-     * Verificar si un directori donat conté subdirectoris
-     * 
-     * @param $path string
-     * 
-     * Retorna true si el camí indicat ($path) conté altres directoris
-     */
-
-    function _hasSubdirs($path) {
-        if (is_dir($path)) {
-            if ($dh = opendir($path)) {
-                while (($file = readdir($dh)) !== false) {
-                    if (is_dir($path . $file) && $file != '.' && $file != '..') {
-                        closedir($dh);
-                        return true;
-                    }
-                }
-                closedir($dh);
-            }
-        }
-        return false;
-    }
-
-    function _deleteFromArray(&$array, $deleteIt, $useOldKeys = FALSE) {
-        $key = array_search($deleteIt, $array, TRUE);
-        if ($key === FALSE)
-            return FALSE;
-        unset($array[$key]);
-        if (!$useOldKeys)
-            $array = array_values($array);
-        return TRUE;
-    }
-
-    /*
+    /**
      *  Funció llegeixIndexCurs()
      * 
      * Llegeix el contingut del fitxer index.txt principal
@@ -517,7 +395,6 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
      *    
      * @author Jordi Fons
      */
-
     function llegeixIndexCurs($fitxer) {
 
         if (!file_exists($fitxer))
@@ -571,15 +448,6 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
             }
         }
 
-        /*    if (!$existeix) {
-          if ($no_concorda)
-          $fitxer = "DISCORDANÇA: " . $fitxer;
-          else
-          $fitxer = "SENSE TÍTOL: " . $fitxer;
-          write_error('errors.log', "\n" . $fitxer, 'a');
-          }
-         * 
-         */
         return $info;
     }
 
@@ -602,7 +470,6 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
         }
 
         $items = explode("$separador", $url);
-        //echo $url.": " . $items[count($items) - 2]." --> ";
         // llegim  array amb els directoris "contenidors"
         $directoris = $conf['directoris'];
 
@@ -611,7 +478,7 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
         } else {
             $principal = 0;
         }
-        //echo $principal."<br>";
+     
         return $principal;
     }
 
@@ -629,11 +496,9 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
      */
     function get_menu($ID, $idnav = 'navcontainer') {
         global $conf;
-        //   echo "pagina--> " . $ID . "<br>";
-        //     echo "\$ID ".$ID."<br>";
-
+ 
         $pagina = getNS($ID);
-        // echo $pagina;
+ 
         $prefixlen = strlen($pagina) + 1;
         $first = true;
 
@@ -759,9 +624,6 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
         /*
           Inici generació menú
          */
-       // $menu = '<div id="' . $idnav . '">';
-       // $menu .= '<ul id="navlist">';
-
         if (!$inBase and $nomenu != 1) {
             $menu .= '<li><a href="' . $this->getFullLink("../index") . '" title="Inici">&lt;&lt;</a></li>';
             $first = false;
@@ -809,13 +671,6 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
                 }
             }
         }
-
-       // $menu .= '</ul>';
-       // $menu .= '</div>';
-        /*
-         * fi menú
-         */
-
 
         return $menu;
     }
@@ -1040,7 +895,7 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
     }
 
     /**
-     *  Funció seriat()
+     *  seriat()
      * 
      * Torna si l'element forma part d'una sèrie (s'acaba en número: ex. modul_1, modul_2, etc)
      */
@@ -1057,7 +912,7 @@ class helper_plugin_ateneuplus extends DokuWiki_Plugin {
 
 }
 
-// vim:ts=4:sw=4:et:
+
 
 
 
