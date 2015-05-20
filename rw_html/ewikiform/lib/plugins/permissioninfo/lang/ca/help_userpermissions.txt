@@ -1,0 +1,2 @@
+Aquesta pàgina mostra els permisos per a un usuari. Els permisos de pàgina es mostren en 
+//cursiva//; els permisos que són assignats individualment a un usuari es mostren en color.

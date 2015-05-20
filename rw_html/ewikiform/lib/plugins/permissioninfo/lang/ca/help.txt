@@ -1,0 +1,12 @@
+En aquesta pantalla podeu veure els permisos per a cada grup i per als usuaris 
+de cada grup.
+
+Si situeu el cursor a sobre del nom, podreu veure el nom d'usuari d'accés 
+(login name).
+
+Els usuaris que tenen permisos individuals es mostren ressaltats.
+
+Si cliqueu sobre el nom d'un usuari, podreu veure els seus permisos individuals,
+derivats del ACL, per als grups als quals pertany o els permisos que li han 
+estat assignats individualment.
+
