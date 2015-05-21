@@ -74,6 +74,11 @@ class SerialMetaStore extends AJXP_AbstractMetaSource implements MetaStoreProvid
             self::$metaCache[$nameSpace] = array();
         }
         self::$metaCache[$nameSpace] = array_merge(self::$metaCache[$nameSpace], $metaData);
+        if(is_array(self::$metaCache[$nameSpace])){
+            foreach(self::$metaCache[$nameSpace] as $k => $v){
+                if($v == AJXP_VALUE_CLEAR) unset(self::$metaCache[$nameSpace][$k]);
+            }
+        }
         $this->saveMetaFileData(
             $ajxpNode,
             $scope,
@@ -99,7 +104,7 @@ class SerialMetaStore extends AJXP_AbstractMetaSource implements MetaStoreProvid
 
     public function retrieveMetadata($ajxpNode, $nameSpace, $private = false, $scope=AJXP_METADATA_SCOPE_REPOSITORY)
     {
-        if($private == AJXP_METADATA_ALLUSERS){
+        if($private === AJXP_METADATA_ALLUSERS){
             $userScope = AJXP_METADATA_ALLUSERS;
         }else if($private === true){
             $userScope = $this->getUserId($ajxpNode);

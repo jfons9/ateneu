@@ -3,7 +3,8 @@
     "UNIQUE_INSTANCE_CONFIG":{
       "instance_name":"conf.serial",
       "group_switch_value":"conf.serial"
-    }
+    },
+    "AJXP_CLI_SECRET_KEY":"@bL2&YMim1gJ3f8hAX6Bt%VW"
   },
   "core.auth":{
     "MASTER_INSTANCE_CONFIG":{

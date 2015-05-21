@@ -252,6 +252,24 @@ class sqlLogDriver extends AbstractLogDriver
      */
     public function write2($level, $ip, $user, $source, $prefix, $message)
     {
+        if($prefix == "Log In" && $message="context=API"){
+            // Limit the number of logs
+            $test = dibi::query('SELECT [logdate] FROM [ajxp_log] WHERE [user]=%s AND [message]=%s AND [params]=%s ORDER BY [logdate] DESC %lmt %ofs', $user, $prefix, $message, 1, 0);
+            $lastInsert = $test->fetchSingle();
+            $now = new DateTime('NOW');
+            if(is_a($lastInsert, "DibiDateTime")){
+                $lastTimestamp = $lastInsert->getTimestamp();
+            }else{
+                $lastTimestamp = strtotime($lastInsert);
+            }
+            if($lastInsert !== false && $now->getTimestamp() - $lastTimestamp < 60 * 60){
+                // IGNORING, LIMIT API LOGINS TO ONE PER HOUR, OR IT WILL FILL THE LOGS
+                return;
+            }
+        }
+        if(AJXP_Utils::detectXSS($message)){
+            $message = "XSS Detected in Message!";
+        }
         $log_row = Array(
             'logdate'   => new DateTime('NOW'),
             'remote_ip' => $this->inet_ptod($ip),
@@ -328,7 +346,7 @@ class sqlLogDriver extends AbstractLogDriver
                         "ajxp_mime"         => "datagrid",
                         "grid_datasource"   => "get_action=ls&dir=".urlencode($path),
                         "grid_header_title" => "Application Logs for $date",
-                        "grid_actions"      => "refresh,copy_as_text"
+                        "grid_actions"      => "refresh,filter,copy_as_text"
                     );
                     $xml_strings[$date] = AJXP_XMLWriter::renderNode($path, $date, true, $metadata, true, false);
                 }

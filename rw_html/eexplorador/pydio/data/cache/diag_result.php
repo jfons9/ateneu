@@ -33,7 +33,7 @@
     'name' => 'Pydio version',
     'result' => false,
     'level' => 'info',
-    'info' => 'Version : 6.0.5',
+    'info' => 'Version : 6.0.7',
   ),
   1 => 
   array (

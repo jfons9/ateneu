@@ -143,12 +143,17 @@ class AJXP_XMLWriter
     {
         $string = "<tree";
         $metaData["filename"] = $nodeName;
+        if(AJXP_Utils::detectXSS($nodeName)) $metaData["filename"] = "/XSS Detected - Please contact your admin";
         if (!isSet($metaData["text"])) {
+            if(AJXP_Utils::detectXSS($nodeLabel)) $nodeLabel = "XSS Detected - Please contact your admin";
             $metaData["text"] = $nodeLabel;
+        }else{
+            if(AJXP_Utils::detectXSS($metaData["text"])) $metaData["text"] = "XSS Detected - Please contact your admin";
         }
         $metaData["is_file"] = ($isLeaf?"true":"false");
 
         foreach ($metaData as $key => $value) {
+            if(AJXP_Utils::detectXSS($value)) $value = "XSS Detected!";
             $value = AJXP_Utils::xmlEntities($value, true);
             $string .= " $key=\"$value\"";
         }
@@ -560,10 +565,12 @@ class AJXP_XMLWriter
             }
             $buffer.="</preferences>";
             $buffer.="<special_rights is_admin=\"".($loggedUser->isAdmin()?"1":"0")."\"  ".($lock!==false?"lock=\"$lock\"":"")."/>";
+            /*
             $bMarks = $loggedUser->getBookmarks();
             if (count($bMarks)) {
                 $buffer.= "<bookmarks>".AJXP_XMLWriter::writeBookmarks($bMarks, false)."</bookmarks>";
             }
+            */
             $buffer.="</user>";
         }
         return $buffer;

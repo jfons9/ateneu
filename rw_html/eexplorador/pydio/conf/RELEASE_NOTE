@@ -1,4 +1,152 @@
-Pydio 6.0.5 Release Note
+Pydio 6.0.7 Release Note
+
+Security Update
+
+Pydio 6.0.7 is a Security Update linked to vulnerabilities discovered by Lane Thames. It also fixes various small bugs.
+Upgrade is straightforward and recommended, either in-app (archive deployments) or via Linux repositories (apt-get / yum).
+Contributors: Cdujeu, Lane Thames, C12simple.
+SMB Auth: include domain name to user name (details)
+Get list of repository automatically (details)
+Massive refactoring of ElasticSearch plugin. Keyword search and indexed fields is working. (details)
+AuthService test userExist and create new (details)
+Add new parameter in ShareCenter to force password on public links. (details)
+InfoPanel: catch modifier evaluation error - CSS: hack transparent backgrounds for IE8 using \9 symbol. (details)
+Correct smb path string (details)
+ShareCenter : fix link pointing to a non-existing repository (details)
+ShareCenter.js: forgotten console calls (details)
+ShareCenter: Catch exceptions when forwarding changes, otherwise it stops the loop. (details)
+AjxpUtils::convertBytes : handle comma - Ajxp_VarsFilter::filter : pass an object or an id as resolve user (details)
+Major update of ElasticSearch implementation / Refactor some method to common parent with Lucene. (details)
+Check userExist to create new user for new sharing (details)
+Add a new dependency type phpExtension to avoid loading plugin that have a strong dependency to one or more php extensions. (details)
+Remove (beta) from sync clients buttons (details)
+ShareCenter: Fix "Preview" checkbox being automagically rechecked. Check template is not ajxp_unique_dl. (details)
+Start refactoring major JS resources. Split into subfolders. (details)
+Display admin Search Results with USER_DISPLAY_NAME (details)
+webdav error on smb workspace (details)
+Shared user watch is not correctly removed when user is removed from "Share with..." list. (details)
+Improve sanitization in Mysql driver and locally in XHRUploader. (details)
+Limit API connection "Login" logs to one per hour, otherwise it fills the log table, and makes the analytics quite slow. (details)
+Better commands sanitization to limit admin rights. (details)
+Fix text logger: was broken due to the clone call on object: refresh the fileHandle resource on clone. (details)
+Fix group listing for shared users when inside a group (cherry picked from commit a9fdc8c) (details)
+Ability to use multiple secure_token in one session, to avoid force reload on new tab. Notify existing windows with <require_registry_reload>. (details)
+IE8 Fixes - Fix #899 : remove tooltip when refreshing templates. (details)
+Make Etherpad more simple: support only .pad extensions, disable hideExtension() hook. (details)
+Refix c0205642045e943c086eb054f3947d5311d9997e : case is different if group listing is allowed on all groups or sub groups only. (details)
+Pass AJXP_VALUE_CLEAR as metadata value to force clearing key after array_merge() (details)
+Fix un-removed notification by checking ACL when listing the watches and updating metadata accordingly. (details)
+Fix Zip options tweaking, by properly separating zipBrowsingEnabled vs. zipCreationEnabled. (details)
+Use Dibi syntax for cross-db limit (details)
+Fix Jumploader not correctly sending node.change event (thus missing indexation) (details)
+Fix PLUploader : new way to get secure_token (details)
+
+
+------------------
+Pydio 6.0.6 - April 9, 2015
+
+Pydio 6.0.6 mostly provides bugfixes and security improvements for the v6 branch, but it also adds some interesting features in the field of metadata and search engine.
+Upgrade is straightforward and recommended, either in-app (archive deployments) or via Linux repositories (apt-get / yum).
+Contributors: Cdujeu, DepaMarco, C12simple, Ellega, Kluckow, Huzergackl, Raiatea, Garnetius, Svetlemodry. Big up!
+
+## New Features
+New Mozilla PDF.JS pdf viewer.
+New metadata type "tags" with auto-completion and special display.
+Rework of the SearchEngine ergonomy: better list reloading, direct access to advanced mode, better handling of advanced external metadatas.
+New filter action in Datagrid for logs: quick filtering on any column value.
+Add a button in settings to clear cache
+Revert the automatic switch to mysqli, which seems to create problems on some systems.
+
+## Plugins Fixes
+[meta.mount] Remove type strict comparison for mount_env_passwd option. (details)
+[action.powerfs]PowerFS don't works if Command Line "enable" and accent (Windows OS) (details)
+[auth.cas] Fix cas in client mode (click two times for login) (details)
+[scheduler] Form validation for Schedule Task at client side (details)
+[scheduler] Clean scheduler actions - Fix #838 Fix french translation (run current task, not tasks) (details)
+[action.share] Update the plugin JavaScript code for iframe and shared file preview. (details)
+[access.s3] Fix setMetadata() on metastore.s3 plugin, broken for non-ascii chars, the CopySource parameter must be urlencoded. (details)
+[metastore.s3] Use rawurlencode instead of urlencode (details)
+[editor.imagick] Add Illustrator File to Image Magick (details)
+[editor.ckeditor] Adding a delay in CKEditor data loading seems to avoid random blank screen. (details)
+[auth.cyphered_post] Add a switch to active repository (details)
+[authfront.otp] Fix login form display in authfront.otp. (details)
+[editor.etherpad-lite] Big update of the Etherpad-lite integration. Seems like we cannot detect pads with no author, we would have to set up a task to clean orphan pads. Should Fix #865 Fix #867 (details)
+[meta.mount] Set the "use 32 result code as success" via option (default true for non-regression). Close #824 (details)
+[index.lucene] Better error logging when lucene fails to open or create an index. (details)
+[index.lucene] Lucene: detect if the tmp index is currently being modified (last 3 minutes) to avoid multiple indexation tasks loaded concurrently. (details)
+[index.lucene] Fix meta fields indexation issues (on node.change event). (details)
+[action.powerfs] Use DIRECTORY_SEPARATOR in powerfs plugin for operation_id file. (details)
+[mq.sql] Notifications queuing: fix SQL implementation that fails selecting the max value as the column is varchar (use sql CAST expression). Remove unnecessary create.sql scripts. (details)
+[core.index] Do not call is_dir on trigger node.index on the root node. It can create problems with non-fs workspaces like SMB for indexation. (details)
+[access.fs] Internalize setHiddenAttribute in fsAccessDriver instead of AJXP_Utils (details)
+[mq.sql] Feedstore: forward "reload_user_feed" event to parent repository if any. Fix i18n issues for "watch/stop watching" button Ignore notif to delete if already deleted. (details)
+[sync] Detect when update queries are applied on non-indexed items using getAffectedRows() (details)
+[sync] Automatically disable the keystore generate_auth_token action if Session Set Credentials is set in config. This will force systematic basic_auth. (details)
+
+## Core & Performances
+Core performances: . AJXP_Controller: Minimize xPath calls by implementating a hookCache . AJXP_Plugin: reduce serialization - AJXP_PluginService: Try to use cache for softLoad operation (still return a cloned version of the cached plugin) . AJXP_Utils: cache the result of cleanDibiDriverParameters() function as it is called many times. (details)
+Fix OS detection - Add iPad & iPhone (details)
+RunTests: Fix apiPost function() (details)
+If a client is posting bad parameters, it can end up copying a file into itself. (details)
+Revert the automatic switch to MySQLi, add a parameter instead. (details)
+Perfs: avoid reapplying role if already in the user's roles. (details)
+Hard reload node data with clearstatcache() call on node update Add a seed with file modiftime to make sure thumbnail is reloaded on change (details)
+Fix comparison issue for AJXP_METADATA_ALLUSERS value. Could lead to share metadata. (details)
+Typo in mailer, fix #864 (details)
+Fix various issues with Forget Password action - Fix #863 (details)
+Prevent some plugins to be disabled - Close #873 (details)
+Add utils in node for moving meta on node change (details)
+Add a hook on node.change to move bookmarks metadata, should fix #870 We should refactor all the bookmarks management into a proper plugin. At the moment, moving to recycle is not considered deleted. (details)
+Use protocol in runTests script - Fix #871 (details)
+Set nodes as nonLeaf when we know it - Fix #859 (details)
+Add the function filterNodeName() to the AjxpWrapperProvider, and use it in the webdav collection to correctly load the hidden files/folders configurations. Alternative to fix #862 and fix #861 (details)
+Fix edge-case where user cannot change its starting workspace (details)
+Now that we need rewrite rules anyway, set the corresponding option to true by default in action.share (details)
+Switch TRANSMIT_CLEAR_PASS to hidden parameter (don't remove it totally for backward compatibility) - Close #875 (details)
+Add a getOptionAsBool() function abstractAuthDriver and use everywhere we use TRANSMIT_CLEAR_PASS. Handle all possible values (true, "true", 1, etc...). (details)
+Plugin : load global_param and param configs definitions (details)
+Do not override __AJXP_VALUE_SET__ value. Typo in AJXP_SAFE_SECRET_KEY. (details)
+Move decypher function in AJXP_Utils instead of AbstractAjxpUser. Do not override __AJXP_VALUE_SET__ when parsing standard form. New parameter $complexChars in generateRandomString function. (details)
+Unused decodeUserPassword method (use AJXP_Utils instead). (details)
+Use AJXP_Utils function for decyphering password (details)
+Make sure not to use the repositories cache if not yet initialized. (details)
+Meta.quota: make sure to respect hierarchy by trying to get quota of parent repository owner if it exists (can be a template child without owner), then from the currently logged user, then from the repository config. Fix #884 (details)
+Hunting while(!feof(..)) calls missing a test on the resource: can trigger an infinite read and a CPU hog. (details)
+Default "Cache Master Users" parameter to False instead of True (details)
+Remove meta_fields, meta_types, meta_labels from node metadata, use exposed plugins configs instead. Fix CSS labels on detailed view. (details)
+
+## Authentications & Security
+Strip query string part of the url, otherwise using query like ?xdebug=true appends the query part to the base value. (details)
+Login: empty the fields values only after response is received. (details)
+Pass session credentials to command line via ENV variable. Generate a unique secret key at install for tokenisation of CLI calls instead of using default one. (details)
+Prefix cyphered passwords inside role parameters with a specific string. listParameters() removes prefix by default, can either keep it ($preserveCypheredPasswords) or blur passwords ($blurCypheredPasswords) by replacing with __AJXP_VALUE_SET__ value. (details)
+Massive changes for better handling parameters values in ajxp_conf driver. (details)
+Fix various buttons issues with reset password (fix #885) and handle case insensitive logins. (details)
+Add more logs for various "preview" operations (Imagick, Diaporama, etc) (details)
+Fix pruneTemporaryKeys for PostgreSql (details)
+FINAL_KEY is not used anymore, remove it. (details)
+AJXP_Utils: Make sure to remove = from base64encoded string when generating random string. (details)
+
+## GUI
+In standard List mode, show additional metadata (like in v5) by hovering rows with mouse. Permanent display can be customized by CSS.
+Change place of "Set as default workspace" checkbox as it was no more accessible. (details)
+Missing fitParent creates resizing issue in IE for My Account pane. (details)
+Rework of the SearchEngine ergonomy: better list reloading, direct access to advanced mode, better handling of advanced external metadatas. New filters feature in FilesList to dynamic filter contents. In table mode, adds headers with input texts. In standard List mode, show additional metadata (like in v5) by hovering rows with mouse. (details)
+Activate the new filter action in datagrid for logs (details)
+Add a "filter" button using the new FilesList feature in ajxp_datagrid : applicable to logs directly. (details)
+Fix Search input opening when media queries are applied (details)
+Reset MetaSource selector after adding (to focus on the new instance). (details)
+Fix scroller issue (details)
+Fix message box blinking and style. (details)
+User.js Detect and log circular references Fix circular references in AjxpTabulator (init Tab with object clone). (details)
+Fix small glitch in PreviewFactory (details)
+
+## Internationalisation (i18n)
+Update de.php (details)
+missing "," character in various en.php files (details)
+Fix workspace display when using russian language on IIS. (details)
+Italian translations (details)
+Updated german translations, fixed translation keys and made more plugins translatable (details)
 
 Pydio 6.0.5 - Bugfix Release, again
 

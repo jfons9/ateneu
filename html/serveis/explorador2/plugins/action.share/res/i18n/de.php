@@ -83,8 +83,8 @@ $mess = array(
 "78"=> "Achtung, Sie sollten nur standard-alphanumerische Zeichen für Benutzernamen verwenden. Die Bezeichnung '%CURRENT%' wird durch '%NEW%' ersetzt.",
 "79"=> "Benachrichtigung",
 "80"=> "Sende den Link per Email an die selektierten Nutzer oder Adressen",
-"81"=> "beobachtet",
-"82"=> "unbeobachtet",
+"81"=> "unbeobachten",
+"82"=> "beobachten",
 "83"=> "Beobachtungsstatus ändern um eine/keine Benachrichtigung bei einen Download zu erhalten",
 "84"=> "Passwort",
 "85"=> "Dieser Link ist durch ein Passwort geschützt",
@@ -185,4 +185,6 @@ $mess = array(
     "172" => "Dieser Link wird bereits genutzt. Wähle ein anderes Kürzel.",
     "173" => "Wenn Sie ein dauerhaften und ansehlichen Link möchten (z.B. https://.../mein-kuerzel), können Sie dieses Feld nutzen. Ansonsten wird das Kürzel zufällig generiert.",
     "174" => "Deaktiviere Passwort",
+    "175" => "Please set a password and make sure it's long enough!",
+    "176" => "(Mandatory)",
 );
