@@ -1,0 +1,6 @@
+Aquest carpeta conté les dades úniques de la wiki (especialment 'pages' i 'media')
+
+Enllaç simbòlic:
+ln -s /dades/wikiform/data /dades/wikiform/html/wikiform/data
+
+

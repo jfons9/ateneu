@@ -1,5 +1,8 @@
 Carpeta buida
-Hi aniran els enllaços simbòlics a /dades/ewikiexport/data/cache i /dades/ewikiexport/data/tmp
+
+Hi aniran els enllaços simbòlics 
+ln -s /dades/wikiform/rw_html/ewikiexport_data/cache /dades/wikiform/html/wikiexport/data/cache
+ln -s /dades/wikiform/rw_html/ewikiexport_data/tmp /dades/wikiform/html/wikiexport/data/tmp
 
 <?php
 
